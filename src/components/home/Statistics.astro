@@ -33,8 +33,8 @@ const stats = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
       {stats.map((stat) => (
         <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center backdrop-blur-sm">
-          <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center">
-            <img src={stat.icon} alt={stat.label} class="w-full h-full object-contain brightness-0 invert" loading="lazy" />
+          <div class="h-10 mx-auto mb-5 flex items-center justify-center">
+            <img src={stat.icon} alt={stat.label} class="h-full w-auto object-contain brightness-0 invert" loading="lazy" />
           </div>
           <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">
             <span class="counter" data-target={stat.target}>0</span>{stat.suffix}
