@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../components/layout/Layout.astro';
+import Breadcrumb from '../components/shared/Breadcrumb.astro';
+import WhatsAppButton from '../components/shared/WhatsAppButton.astro';
+import { SITE } from '../data/company';
+---
+
+<BaseLayout title="Cek Resi" description="Cek resi dan lacak status pengiriman barang Anda melalui Terminal Cargo Indonesia. Pantau kiriman kargo udara, darat, dan laut secara real-time.">
+  <Layout>
+    <section class="bg-[#021B43] py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">Cek Resi</h1>
+        <p class="text-gray-300 mb-8">Lacak status pengiriman barang Anda dengan memasukkan nomor AWB.</p>
+        <form id="tracking-form" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+          <input
+            type="text"
+            id="awb-input"
+            placeholder="Masukkan nomor AWB..."
+            class="flex-1 px-5 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF5001]"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="bg-[#FF5001] hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors whitespace-nowrap"
+          >
+            Lacak
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div id="results"></div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#021B43] text-center mb-10">Status Pengiriman</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_rcs.png" alt="RCS" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">RCS</h3>
+            <p class="text-white text-sm">Received from Shipper — Barang telah diterima dari pengirim.</p>
+          </div>
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_manifest.png" alt="Manifest" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">Manifest</h3>
+            <p class="text-white text-sm">Barang telah di-manifest-kan dan siap untuk dikirim.</p>
+          </div>
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_onboard.png" alt="On Board" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">On Board</h3>
+            <p class="text-white text-sm">Barang telah dimuat ke dalam pesawat dan dalam perjalanan.</p>
+          </div>
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_arrival.png" alt="Arrival" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">Arrival</h3>
+            <p class="text-white text-sm">Barang telah tiba di bandara tujuan.</p>
+          </div>
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_delivery.png" alt="Delivery" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">Delivery</h3>
+            <p class="text-white text-sm">Barang sedang dalam proses pengantaran ke penerima.</p>
+          </div>
+          <div class="bg-[#021B43] rounded-xl p-6 text-center">
+            <img src="/images/cek-resi/cek_resi_pod.png" alt="POD" class="w-20 h-20 mx-auto mb-4 object-contain" />
+            <h3 class="text-lg font-bold text-white mb-2">POD</h3>
+            <p class="text-white text-sm">Proof of Delivery — Barang telah diterima oleh penerima.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>
+
+<script>
+  const isLocal = location.hostname === 'localhost' || location.hostname.endsWith('.test');
+  const API_URL = isLocal
+    ? 'https://track-tci.test/api/cek-resi'
+    : 'https://app.terminalcargoindonesia.com/api/cek-resi';
+
+  const MASKAPAI_LOGO: Record<string, string> = {
+    '990': '/images/maskapai/maskapai_lion_air.png',
+    '126': '/images/maskapai/maskapai_garuda_indonesia.png',
+    '888': '/images/maskapai/maskapai_citilink.png',
+    '920': '/images/maskapai/maskapai_superairjet.png',
+    '513': '/images/maskapai/maskapai_wingsair.png',
+    '938': '/images/maskapai/maskapai_batikair.png',
+  };
+
+  const POD_BASE_URL = 'https://app.terminalcargoindonesia.com/file/pod/';
+
+  const form = document.getElementById('tracking-form') as HTMLFormElement;
+  const input = document.getElementById('awb-input') as HTMLInputElement;
+  const results = document.getElementById('results') as HTMLDivElement;
+
+  function formatDate(dateStr: string): string {
+    if (!dateStr) return '-';
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString('id-ID', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  }
+
+  function showLoading(): void {
+    results.innerHTML = `
+      <div class="flex justify-center items-center py-12">
+        <svg class="animate-spin h-10 w-10 text-[#FF5001]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+      </div>
+    `;
+  }
+
+  function showError(title: string, message: string): void {
+    results.innerHTML = `
+      <div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center my-10">
+        <svg class="w-12 h-12 text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <h3 class="text-xl font-bold text-red-700 mb-2">${title}</h3>
+        <p class="text-red-600">${message}</p>
+      </div>
+    `;
+  }
+
+  function renderOrders(orders: any[]): void {
+    let html = '';
+
+    for (const order of orders) {
+      const logo = MASKAPAI_LOGO[order.maskapai_prefix] || '';
+      const displayNumber = order.jenis === 'Port To Port' ? order.nomor : order.resi;
+
+      html += `
+        <div class="bg-[#021B43] rounded-xl shadow-sm mb-6 overflow-hidden">
+          <div class="flex flex-col sm:flex-row items-center gap-4 p-6 border-b border-white/10">
+            ${logo ? `<img src="${logo}" alt="${order.maskapai_prefix}" class="h-10 object-contain" />` : ''}
+            <div class="text-center sm:text-left">
+              <p class="text-lg font-bold text-white">${displayNumber} / ${order.nama}</p>
+              ${order.tujuan ? `<p class="text-sm text-gray-300">Tujuan: ${order.tujuan}</p>` : ''}
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-white/10">
+                  <th class="text-left px-6 py-3 text-sm font-semibold text-gray-300 uppercase tracking-wide">Tanggal</th>
+                  <th class="text-left px-6 py-3 text-sm font-semibold text-gray-300 uppercase tracking-wide">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+      `;
+
+      if (order.tracking && order.tracking.length > 0) {
+        for (const t of order.tracking) {
+          const isPOD = t.status && t.status.includes('Proof Of Delivery (POD)');
+          const podImage = isPOD && t.gambar_pod ? `${POD_BASE_URL}${t.gambar_pod}` : '';
+
+          html += `
+                <tr class="border-b border-white/5 last:border-b-0">
+                  <td class="px-6 py-4 text-sm text-gray-300 whitespace-nowrap">${formatDate(t.tanggal)}</td>
+                  <td class="px-6 py-4 text-sm text-white">
+                    ${t.status}
+                    ${podImage ? `<br/><img src="${podImage}" alt="POD" class="mt-2 max-w-xs rounded-lg border border-white/10" />` : ''}
+                  </td>
+                </tr>
+          `;
+        }
+      } else {
+        html += `
+        <tr>
+                   <td colspan="2" class="px-6 py-4 text-sm text-gray-300 text-center">Belum ada data tracking.</td>
+                 </tr>
+        `;
+      }
+
+      html += `
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+    }
+
+    results.innerHTML = html;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nomor = input.value.trim();
+    if (!nomor) {
+      input.focus();
+      return;
+    }
+
+    showLoading();
+
+    try {
+      const res = await fetch(`${API_URL}?nomor=${encodeURIComponent(nomor)}`);
+      const data = await res.json();
+
+      if (data.error === 'Data Terhapus Sementara' || (data.orders && data.orders.length > 0 && data.orders[0].deleted_at)) {
+        showError('Data Terhapus Sementara', 'Data pengiriman ini telah dihapus sementara dari sistem.');
+        return;
+      }
+
+      if (data.found && data.orders && data.orders.length > 0) {
+        renderOrders(data.orders);
+      } else {
+        showError('Nomor AWB Belum Dimasukkan Dalam Sistem', `Nomor AWB "${nomor}" tidak ditemukan. Pastikan nomor yang Anda masukkan sudah benar.`);
+      }
+    } catch (err) {
+      showError('Terjadi Kesalahan', 'Gagal menghubungi server. Silakan coba lagi nanti.');
+    }
+  });
+</script>

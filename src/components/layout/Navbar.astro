@@ -5,7 +5,7 @@ const currentPath = Astro.url.pathname;
 
 const menuItems = [
   { label: 'Beranda', href: '/' },
-  { label: 'Cek Resi', href: SITE.app.cekResi, external: true },
+  { label: 'Cek Resi', href: SITE.app.cekResi },
   { label: 'Cek Harga', dropdown: true, items: [
     { label: 'Udara (Port to Port)', href: SITE.app.cekHargaPtp },
     { label: 'Udara (Door to Door)', href: SITE.app.cekHargaDtd },
@@ -82,8 +82,6 @@ function isActive(href: string): boolean {
                   {item.items?.map((sub) => (
                     <a
                       href={sub.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary transition-colors"
                     >
                       {sub.label}
@@ -161,8 +159,6 @@ function isActive(href: string): boolean {
                   {item.items?.map((sub) => (
                     <a
                       href={sub.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       class="block px-3 py-2.5 text-sm text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       {sub.label}

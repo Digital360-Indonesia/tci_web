@@ -1,0 +1,436 @@
+[
+    {
+        "no": 1,
+        "kota": "AMBON",
+        "code": "AMQ",
+        "harga_dalam_kota": 80692,
+        "harga_luar_kota": 90692
+    },
+    {
+        "no": 2,
+        "kota": "BALIKPAPAN",
+        "code": "BPN",
+        "harga_dalam_kota": 42708,
+        "harga_luar_kota": 52708
+    },
+    {
+        "no": 3,
+        "kota": "BANDA ACEH",
+        "code": "BTJ",
+        "harga_dalam_kota": 53098,
+        "harga_luar_kota": 63098
+    },
+    {
+        "no": 4,
+        "kota": "BENGKULU",
+        "code": "BKS",
+        "harga_dalam_kota": 35671,
+        "harga_luar_kota": 45671
+    },
+    {
+        "no": 5,
+        "kota": "BANJARMASIN",
+        "code": "BDJ",
+        "harga_dalam_kota": 37669,
+        "harga_luar_kota": 47669
+    },
+    {
+        "no": 6,
+        "kota": "BERAU",
+        "code": "BEJ",
+        "harga_dalam_kota": 71365,
+        "harga_luar_kota": 81365
+    },
+    {
+        "no": 7,
+        "kota": "BATAM",
+        "code": "BTH",
+        "harga_dalam_kota": 42109,
+        "harga_luar_kota": 52109
+    },
+    {
+        "no": 8,
+        "kota": "BIAK",
+        "code": "BIK",
+        "harga_dalam_kota": 87730,
+        "harga_luar_kota": 97730
+    },
+    {
+        "no": 9,
+        "kota": "BANDUNG",
+        "code": "BDO",
+        "harga_dalam_kota": 36725,
+        "harga_luar_kota": 46725
+    },
+    {
+        "no": 10,
+        "kota": "BIMA",
+        "code": "BMU",
+        "harga_dalam_kota": 100384,
+        "harga_luar_kota": 110384
+    },
+    {
+        "no": 11,
+        "kota": "DENPASAR",
+        "code": "DPS",
+        "harga_dalam_kota": 27124,
+        "harga_luar_kota": 37124
+    },
+    {
+        "no": 12,
+        "kota": "ENDE",
+        "code": "ENE",
+        "harga_dalam_kota": 61090,
+        "harga_luar_kota": 71090
+    },
+    {
+        "no": 13,
+        "kota": "JAKARTA",
+        "code": "CGK",
+        "harga_dalam_kota": 29502,
+        "harga_luar_kota": 39502
+    },
+    {
+        "no": 14,
+        "kota": "JAMBI",
+        "code": "DJB",
+        "harga_dalam_kota": 33118,
+        "harga_luar_kota": 43118
+    },
+    {
+        "no": 15,
+        "kota": "JAYAPURA",
+        "code": "DJJ",
+        "harga_dalam_kota": 87286,
+        "harga_luar_kota": 97286
+    },
+    {
+        "no": 16,
+        "kota": "UJUNG PANDANG (MAJENE)",
+        "code": "UPG",
+        "harga_dalam_kota": 44551,
+        "harga_luar_kota": 54551
+    },
+    {
+        "no": 17,
+        "kota": "MANADO",
+        "code": "MDC",
+        "harga_dalam_kota": 84955,
+        "harga_luar_kota": 94955
+    },
+    {
+        "no": 18,
+        "kota": "KETAPANG",
+        "code": "KTG",
+        "harga_dalam_kota": 49657,
+        "harga_luar_kota": 59657
+    },
+    {
+        "no": 19,
+        "kota": "MEDAN",
+        "code": "KNO",
+        "harga_dalam_kota": 48325,
+        "harga_luar_kota": 58325
+    },
+    {
+        "no": 20,
+        "kota": "MATARAM",
+        "code": "LOP",
+        "harga_dalam_kota": 32785,
+        "harga_luar_kota": 42785
+    },
+    {
+        "no": 21,
+        "kota": "MAUMERE",
+        "code": "MOF",
+        "harga_dalam_kota": 69970,
+        "harga_luar_kota": 79970
+    },
+    {
+        "no": 22,
+        "kota": "MANOKWARI",
+        "code": "MKW",
+        "harga_dalam_kota": 69859,
+        "harga_luar_kota": 79859
+    },
+    {
+        "no": 23,
+        "kota": "MERAUKE",
+        "code": "MKQ",
+        "harga_dalam_kota": 111262,
+        "harga_luar_kota": 121262
+    },
+    {
+        "no": 24,
+        "kota": "KENDARI",
+        "code": "KDI",
+        "harga_dalam_kota": 72867,
+        "harga_luar_kota": 82867
+    },
+    {
+        "no": 25,
+        "kota": "KUPANG",
+        "code": "KOE",
+        "harga_dalam_kota": 66152,
+        "harga_luar_kota": 76152
+    },
+    {
+        "no": 26,
+        "kota": "LUWUK",
+        "code": "LUW",
+        "harga_dalam_kota": 74854,
+        "harga_luar_kota": 84854
+    },
+    {
+        "no": 27,
+        "kota": "TAMBOLAKA",
+        "code": "TMC",
+        "harga_dalam_kota": 73411,
+        "harga_luar_kota": 83411
+    },
+    {
+        "no": 28,
+        "kota": "LABUHAN BAJO (MANGGARAI, NTT)",
+        "code": "LBJ",
+        "harga_dalam_kota": 60535,
+        "harga_luar_kota": 70535
+    },
+    {
+        "no": 29,
+        "kota": "TUAL",
+        "code": "LUV",
+        "harga_dalam_kota": 116368,
+        "harga_luar_kota": 126368
+    },
+    {
+        "no": 30,
+        "kota": "PALEMBANG",
+        "code": "PLM",
+        "harga_dalam_kota": 36310,
+        "harga_luar_kota": 46310
+    },
+    {
+        "no": 31,
+        "kota": "PALU",
+        "code": "PLW",
+        "harga_dalam_kota": 70181,
+        "harga_luar_kota": 80181
+    },
+    {
+        "no": 32,
+        "kota": "PANGKAL PINANG",
+        "code": "PGK",
+        "harga_dalam_kota": 35671,
+        "harga_luar_kota": 45671
+    },
+    {
+        "no": 33,
+        "kota": "PANGKALAN BUN",
+        "code": "PKN",
+        "harga_dalam_kota": 45333,
+        "harga_luar_kota": 55333
+    },
+    {
+        "no": 34,
+        "kota": "PEKANBARU",
+        "code": "PKU",
+        "harga_dalam_kota": 39056,
+        "harga_luar_kota": 49056
+    },
+    {
+        "no": 35,
+        "kota": "PONTIANAK",
+        "code": "PNK",
+        "harga_dalam_kota": 41554,
+        "harga_luar_kota": 51554
+    },
+    {
+        "no": 36,
+        "kota": "PALANGKARAYA",
+        "code": "PKY",
+        "harga_dalam_kota": 52487,
+        "harga_luar_kota": 62487
+    },
+    {
+        "no": 37,
+        "kota": "LAMPUNG",
+        "code": "TKG",
+        "harga_dalam_kota": 30343,
+        "harga_luar_kota": 40343
+    },
+    {
+        "no": 38,
+        "kota": "TERNATE",
+        "code": "TTE",
+        "harga_dalam_kota": 76896,
+        "harga_luar_kota": 86896
+    },
+    {
+        "no": 39,
+        "kota": "TIMIKA",
+        "code": "TIM",
+        "harga_dalam_kota": 101605,
+        "harga_luar_kota": 111605
+    },
+    {
+        "no": 40,
+        "kota": "GORONTALO",
+        "code": "GTO",
+        "harga_dalam_kota": 65197,
+        "harga_luar_kota": 75197
+    },
+    {
+        "no": 41,
+        "kota": "SEMARANG",
+        "code": "SRG",
+        "harga_dalam_kota": 26680,
+        "harga_luar_kota": 36680
+    },
+    {
+        "no": 42,
+        "kota": "SOLO",
+        "code": "SOC",
+        "harga_dalam_kota": 36670,
+        "harga_luar_kota": 46670
+    },
+    {
+        "no": 43,
+        "kota": "JOGJAKARTA",
+        "code": "JOG",
+        "harga_dalam_kota": 34006,
+        "harga_luar_kota": 44006
+    },
+    {
+        "no": 44,
+        "kota": "KULONPROGO",
+        "code": "YIA",
+        "harga_dalam_kota": 25459,
+        "harga_luar_kota": 35459
+    },
+    {
+        "no": 45,
+        "kota": "TANJUNG PANDAN",
+        "code": "TJQ",
+        "harga_dalam_kota": 34894,
+        "harga_luar_kota": 44894
+    },
+    {
+        "no": 46,
+        "kota": "TANJUNG PINANG",
+        "code": "TNJ",
+        "harga_dalam_kota": 53209,
+        "harga_luar_kota": 63209
+    },
+    {
+        "no": 47,
+        "kota": "TARAKAN",
+        "code": "TRK",
+        "harga_dalam_kota": 72867,
+        "harga_luar_kota": 82867
+    },
+    {
+        "no": 48,
+        "kota": "SAMPIT",
+        "code": "SMQ",
+        "harga_dalam_kota": 40333,
+        "harga_luar_kota": 50333
+    },
+    {
+        "no": 49,
+        "kota": "WAINGAPU",
+        "code": "WGP",
+        "harga_dalam_kota": 66973,
+        "harga_luar_kota": 76973
+    },
+    {
+        "no": 50,
+        "kota": "SAUMLAKI",
+        "code": "SXK",
+        "harga_dalam_kota": 117367,
+        "harga_luar_kota": 127367
+    },
+    {
+        "no": 51,
+        "kota": "NABIRE",
+        "code": "NBX",
+        "harga_dalam_kota": 153109,
+        "harga_luar_kota": 163109
+    },
+    {
+        "no": 52,
+        "kota": "BAU BAU",
+        "code": "BUW",
+        "harga_dalam_kota": 63532,
+        "harga_luar_kota": 73532
+    },
+    {
+        "no": 53,
+        "kota": "LARANTUKA",
+        "code": "LKA",
+        "harga_dalam_kota": 78073,
+        "harga_luar_kota": 88073
+    },
+    {
+        "no": 54,
+        "kota": "ATAMBUA",
+        "code": "ABU",
+        "harga_dalam_kota": 78073,
+        "harga_luar_kota": 88073
+    },
+    {
+        "no": 55,
+        "kota": "ALOR",
+        "code": "ARD",
+        "harga_dalam_kota": 78073,
+        "harga_luar_kota": 88073
+    },
+    {
+        "no": 56,
+        "kota": "MAMUJU",
+        "code": "MJU",
+        "harga_dalam_kota": 61645,
+        "harga_luar_kota": 71645
+    },
+    {
+        "no": 57,
+        "kota": "ROTE",
+        "code": "RTI",
+        "harga_dalam_kota": 109264,
+        "harga_luar_kota": 119264
+    },
+    {
+        "no": 58,
+        "kota": "SAMARINDA",
+        "code": "SRI\/AAP",
+        "harga_dalam_kota": 48436,
+        "harga_luar_kota": 58436
+    },
+    {
+        "no": 59,
+        "kota": "TOLI TOLI",
+        "code": "TLI",
+        "harga_dalam_kota": 74299,
+        "harga_luar_kota": 84299
+    },
+    {
+        "no": 60,
+        "kota": "BATULICIN",
+        "code": "BTW",
+        "harga_dalam_kota": 60202,
+        "harga_luar_kota": 70202
+    },
+    {
+        "no": 61,
+        "kota": "SORONG",
+        "code": "SOQ",
+        "harga_dalam_kota": 40333,
+        "harga_luar_kota": 50333
+    },
+    {
+        "no": 62,
+        "kota": "PADANG",
+        "code": "PDG",
+        "harga_dalam_kota": 83068,
+        "harga_luar_kota": 93068
+    }
+]

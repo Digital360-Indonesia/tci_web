@@ -1,0 +1,1218 @@
+[
+    {
+        "no": 1,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "ASAHAN",
+        "harga": 18000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 2,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "BATU BARA",
+        "harga": 19000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 3,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "DAIRI",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 4,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "DELI SERDANG",
+        "harga": 17500,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 5,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "HUMBANG HASUNDUTAN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 6,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "KARO",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 7,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "LABUHAN BATU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 8,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "LABUHAN BATU SELATAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 9,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "LABUHAN BATU UTARA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 10,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "LANGKAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 11,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "MANDAILING NATAL",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 12,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "NIAS",
+        "harga": 35000,
+        "min_charge": 100,
+        "lead_time": "14-15 Hari"
+    },
+    {
+        "no": 13,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "NIAS SELATAN",
+        "harga": 35000,
+        "min_charge": 100,
+        "lead_time": "14-15 Hari"
+    },
+    {
+        "no": 14,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "NIAS UTARA",
+        "harga": 35000,
+        "min_charge": 100,
+        "lead_time": "14-15 Hari"
+    },
+    {
+        "no": 15,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "PADANG LAWAS",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 16,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "PADANG LAWAS UTARA",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 17,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "PAKPAK BHARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 18,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "SAMOSIR",
+        "harga": 35000,
+        "min_charge": 100,
+        "lead_time": "14-15 Hari"
+    },
+    {
+        "no": 19,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "SERDANG BEDAGAI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 20,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "SIMALUNGUN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 21,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TAPANULI SELATAN",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 22,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TAPANULI TENGAH",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 23,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TAPANULI UTARA",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 24,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TOBA",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "9-10 Hari"
+    },
+    {
+        "no": 25,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "BINJAI",
+        "harga": 19000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 26,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "GUNUNG SITOLI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 27,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "MEDAN",
+        "harga": 16000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 28,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "PADANG SIDIMPUAN",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 29,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "PEMATANG SIANTAR",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 30,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "SIBOLGA",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 31,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TANJUNG BALAI",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 32,
+        "provinsi": "SUMATERA UTARA",
+        "kota": "TEBING TINGGI",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 33,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "AGAM",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 34,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "DHARMASRAYA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 35,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "KEPULAUAN MENTAWAI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 36,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "LIMA PULUH KOTA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 37,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PADANG PARIAMAN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 38,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PASAMAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 39,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PASAMAN BARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 40,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PESISIR SELATAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 41,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "SIJUNJUNG",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 42,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "SOLOK",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 43,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "SOLOK SELATAN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 44,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "TANAH DATAR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 45,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PADANG",
+        "harga": 18000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 46,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "BUKIT TINGGI",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 47,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PAYAKUMBUH",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 48,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PARIAMAN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 49,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "SAWAH LUNTO",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 50,
+        "provinsi": "SUMATERA BARAT",
+        "kota": "PADANG PANJANG",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 51,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "BANYUASIN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 52,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "EMPAT LAWANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 53,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "LAHAT",
+        "harga": 16000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 54,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "MUARA ENIM",
+        "harga": 17000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 55,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "MUSI BANYUASIN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 56,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "MUSI RAWAS",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 57,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "MUSI RAWAS UTARA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 58,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "OGAN ILIR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 59,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "OGAN KOMERING ILIR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 60,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "OGAN KOMERING ULU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 61,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "OKU SELATAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 62,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "OKU TIMUR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 63,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "PANUKAL ABAB LEMATANG ILIR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 64,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "PALEMBANG",
+        "harga": 12000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 65,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "LUBUK LINGGAU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 66,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "PAGAR ALAM",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 67,
+        "provinsi": "SUMATERA SELATAN",
+        "kota": "PRABU MULIH",
+        "harga": 18000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 68,
+        "provinsi": "ACEH",
+        "kota": "ACEH SELATAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 69,
+        "provinsi": "ACEH",
+        "kota": "ACEH TENGGARA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 70,
+        "provinsi": "ACEH",
+        "kota": "ACEH TIMUR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 71,
+        "provinsi": "ACEH",
+        "kota": "ACEH TENGAH",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 72,
+        "provinsi": "ACEH",
+        "kota": "ACEH BARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 73,
+        "provinsi": "ACEH",
+        "kota": "ACEH BESAR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 74,
+        "provinsi": "ACEH",
+        "kota": "ACEH UTARA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 75,
+        "provinsi": "ACEH",
+        "kota": "ACEH BARAT DAYA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 76,
+        "provinsi": "ACEH",
+        "kota": "BIREUEN",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "10-12 Hari"
+    },
+    {
+        "no": 77,
+        "provinsi": "ACEH",
+        "kota": "GAYO LUES",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 78,
+        "provinsi": "ACEH",
+        "kota": "ACEH JAYA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 79,
+        "provinsi": "ACEH",
+        "kota": "PIDIE",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 80,
+        "provinsi": "ACEH",
+        "kota": "ACEH TAMIANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 81,
+        "provinsi": "ACEH",
+        "kota": "BENER MERIAH",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 82,
+        "provinsi": "ACEH",
+        "kota": "PIDIE JAYA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 83,
+        "provinsi": "ACEH",
+        "kota": "SIMEULUE",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 84,
+        "provinsi": "ACEH",
+        "kota": "ACEH SINGKIL",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 85,
+        "provinsi": "ACEH",
+        "kota": "SUBULUSSALAM",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 86,
+        "provinsi": "ACEH",
+        "kota": "BANDA ACEH",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "10-12 Hari"
+    },
+    {
+        "no": 87,
+        "provinsi": "ACEH",
+        "kota": "SABANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 88,
+        "provinsi": "ACEH",
+        "kota": "LHOKSEUMAWE",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "10-12 Hari"
+    },
+    {
+        "no": 89,
+        "provinsi": "ACEH",
+        "kota": "LANGSA",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "10-12 Hari"
+    },
+    {
+        "no": 90,
+        "provinsi": "ACEH",
+        "kota": "NAGAN RAYA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 91,
+        "provinsi": "BENGKULU",
+        "kota": "BENGKULU SELATAN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 92,
+        "provinsi": "BENGKULU",
+        "kota": "BENGKULU TENGAH",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 93,
+        "provinsi": "BENGKULU",
+        "kota": "BENGKULU UTARA",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 94,
+        "provinsi": "BENGKULU",
+        "kota": "KAUR",
+        "harga": 28000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 95,
+        "provinsi": "BENGKULU",
+        "kota": "KEPAHIANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 96,
+        "provinsi": "BENGKULU",
+        "kota": "LEBONG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 97,
+        "provinsi": "BENGKULU",
+        "kota": "MUKOMUKO",
+        "harga": 25000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 98,
+        "provinsi": "BENGKULU",
+        "kota": "REJANG LEBONG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 99,
+        "provinsi": "BENGKULU",
+        "kota": "SELUMA",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "8-9 Hari"
+    },
+    {
+        "no": 100,
+        "provinsi": "BENGKULU",
+        "kota": "BENGKULU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 101,
+        "provinsi": "RIAU",
+        "kota": "BENGKALIS",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 102,
+        "provinsi": "RIAU",
+        "kota": "KAMPAR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 103,
+        "provinsi": "RIAU",
+        "kota": "INDRAGIRI HULU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 104,
+        "provinsi": "RIAU",
+        "kota": "INDRAGIRI HILIR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 105,
+        "provinsi": "RIAU",
+        "kota": "KUANTAN SINGINGI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 106,
+        "provinsi": "RIAU",
+        "kota": "PELALAWAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 107,
+        "provinsi": "RIAU",
+        "kota": "ROKAN HILIR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 108,
+        "provinsi": "RIAU",
+        "kota": "ROKAN HULU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 109,
+        "provinsi": "RIAU",
+        "kota": "SIAK",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 110,
+        "provinsi": "RIAU",
+        "kota": "KEPULAUAN MERANTI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 111,
+        "provinsi": "RIAU",
+        "kota": "PEKANBARU",
+        "harga": 18000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 112,
+        "provinsi": "RIAU",
+        "kota": "DUMAI",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 113,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "BINTAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 114,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "KARIMUN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 115,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "LINGGA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 116,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "NATUNA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 117,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "KEPULAUAN ANAMBAS",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 118,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "BATAM",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 119,
+        "provinsi": "KEPULAUAN RIAU",
+        "kota": "TANJUNG PINANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 120,
+        "provinsi": "JAMBI",
+        "kota": "BATANGHARI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 121,
+        "provinsi": "JAMBI",
+        "kota": "BUNGO",
+        "harga": 19000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 122,
+        "provinsi": "JAMBI",
+        "kota": "KERINCI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 123,
+        "provinsi": "JAMBI",
+        "kota": "MERANGIN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 124,
+        "provinsi": "JAMBI",
+        "kota": "MUARO JAMBI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 125,
+        "provinsi": "JAMBI",
+        "kota": "SAROLANGUN",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 126,
+        "provinsi": "JAMBI",
+        "kota": "TANJUNG JABUNG BARAT",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 127,
+        "provinsi": "JAMBI",
+        "kota": "TANJUNG JABUNG TIMUR",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 128,
+        "provinsi": "JAMBI",
+        "kota": "TEBO",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 129,
+        "provinsi": "JAMBI",
+        "kota": "JAMBI",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 130,
+        "provinsi": "JAMBI",
+        "kota": "SUNGAIPENUH",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 131,
+        "provinsi": "LAMPUNG",
+        "kota": "LAMPUNG BARAT",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 132,
+        "provinsi": "LAMPUNG",
+        "kota": "LAMPUNG SELATAN",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 133,
+        "provinsi": "LAMPUNG",
+        "kota": "LAMPUNG TENGAH",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 134,
+        "provinsi": "LAMPUNG",
+        "kota": "LAMPUNG TIMUR",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 135,
+        "provinsi": "LAMPUNG",
+        "kota": "LAMPUNG UTARA",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 136,
+        "provinsi": "LAMPUNG",
+        "kota": "MESUJI",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 137,
+        "provinsi": "LAMPUNG",
+        "kota": "PESAWARAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 138,
+        "provinsi": "LAMPUNG",
+        "kota": "PESISIR BARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 139,
+        "provinsi": "LAMPUNG",
+        "kota": "PRINGSEWU",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 140,
+        "provinsi": "LAMPUNG",
+        "kota": "TANGGAMUS",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 141,
+        "provinsi": "LAMPUNG",
+        "kota": "TULANG BAWANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 142,
+        "provinsi": "LAMPUNG",
+        "kota": "TULANG BAWANG BARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 143,
+        "provinsi": "LAMPUNG",
+        "kota": "WAY KANAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 144,
+        "provinsi": "LAMPUNG",
+        "kota": "BANDAR LAMPUNG",
+        "harga": 15000,
+        "min_charge": 30,
+        "lead_time": "5-6 Hari"
+    },
+    {
+        "no": 145,
+        "provinsi": "LAMPUNG",
+        "kota": "METRO",
+        "harga": 20000,
+        "min_charge": 30,
+        "lead_time": "6-7 Hari"
+    },
+    {
+        "no": 146,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BANGKA",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 147,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BANGKA BARAT",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 148,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BANGKA SELATAN",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 149,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BANGKA TENGAH",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 150,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BELITUNG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 151,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "BELITUNG TIMUR",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 152,
+        "provinsi": "BANGKA BELITUNG",
+        "kota": "PANGKALPINANG",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    }
+]

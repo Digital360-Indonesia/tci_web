@@ -1,0 +1,632 @@
+[
+    {
+        "no": 1,
+        "kota": "AMBON",
+        "code": "AMQ",
+        "garuda": 57528,
+        "sriwijaya": null,
+        "lion": 70692,
+        "citilink": null,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 2,
+        "kota": "BALIKPAPAN",
+        "code": "BPN",
+        "garuda": 30555,
+        "sriwijaya": null,
+        "lion": 32708,
+        "citilink": 31221,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 3,
+        "kota": "BANDA ACEH",
+        "code": "BTJ",
+        "garuda": 37992,
+        "sriwijaya": null,
+        "lion": 43098,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 4,
+        "kota": "BENGKULU",
+        "code": "BKS",
+        "garuda": 25671,
+        "sriwijaya": 17124,
+        "lion": null,
+        "citilink": 24561,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 5,
+        "kota": "BANJARMASIN",
+        "code": "BDJ",
+        "garuda": 27225,
+        "sriwijaya": null,
+        "lion": 27580,
+        "citilink": 27669,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 6,
+        "kota": "BERAU",
+        "code": "BEJ",
+        "garuda": 61365,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 7,
+        "kota": "BATAM",
+        "code": "BTH",
+        "garuda": null,
+        "sriwijaya": 24672,
+        "lion": null,
+        "citilink": 24783,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 8,
+        "kota": "BIAK",
+        "code": "BIK",
+        "garuda": 76287,
+        "sriwijaya": null,
+        "lion": 77730,
+        "citilink": 68517,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 9,
+        "kota": "BANDUNG",
+        "code": "BDO",
+        "garuda": 26725,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 10,
+        "kota": "BIMA",
+        "code": "BMU",
+        "garuda": 90384,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 11,
+        "kota": "DENPASAR",
+        "code": "DPS",
+        "garuda": null,
+        "sriwijaya": 17124,
+        "lion": null,
+        "citilink": 16014,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 12,
+        "kota": "ENDE",
+        "code": "ENE",
+        "garuda": null,
+        "sriwijaya": 14349,
+        "lion": null,
+        "citilink": null,
+        "lead_time": ""
+    },
+    {
+        "no": 13,
+        "kota": "JAKARTA",
+        "code": "CGK",
+        "garuda": 17235,
+        "sriwijaya": 19502,
+        "lion": null,
+        "citilink": 17679,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 14,
+        "kota": "JAMBI",
+        "code": "DJB",
+        "garuda": 23118,
+        "sriwijaya": null,
+        "lion": 17790,
+        "citilink": 22008,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 15,
+        "kota": "JAYAPURA",
+        "code": "DJJ",
+        "garuda": 77286,
+        "sriwijaya": null,
+        "lion": 65964,
+        "citilink": 77286,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 16,
+        "kota": "UJUNG PANDANG",
+        "code": "UPG",
+        "garuda": 29445,
+        "sriwijaya": 27003,
+        "lion": 34551,
+        "citilink": 26337,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 17,
+        "kota": "MANADO",
+        "code": "MDC",
+        "garuda": 55308,
+        "sriwijaya": 41655,
+        "lion": 74955,
+        "citilink": 60969,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 18,
+        "kota": "KETAPANG",
+        "code": "KTG",
+        "garuda": null,
+        "sriwijaya": 39657,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 19,
+        "kota": "MEDAN",
+        "code": "KNO",
+        "garuda": 28557,
+        "sriwijaya": null,
+        "lion": 38325,
+        "citilink": 26020,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 20,
+        "kota": "MATARAM",
+        "code": "LOP",
+        "garuda": 22785,
+        "sriwijaya": 20232,
+        "lion": null,
+        "citilink": 21675,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 21,
+        "kota": "MAUMERE",
+        "code": "MOF",
+        "garuda": 59970,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 22,
+        "kota": "MANOKWARI",
+        "code": "MKW",
+        "garuda": 59859,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 23,
+        "kota": "MERAUKE",
+        "code": "MKQ",
+        "garuda": 101262,
+        "sriwijaya": null,
+        "lion": 95934,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 24,
+        "kota": "KENDARI",
+        "code": "KDI",
+        "garuda": 43320,
+        "sriwijaya": null,
+        "lion": 62867,
+        "citilink": 48093,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 25,
+        "kota": "KUPANG",
+        "code": "KOE",
+        "garuda": 50091,
+        "sriwijaya": null,
+        "lion": 56152,
+        "citilink": 48981,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 26,
+        "kota": "LUWUK",
+        "code": "LUW",
+        "garuda": 64854,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 27,
+        "kota": "TAMBOLAKA",
+        "code": "TMC",
+        "garuda": null,
+        "sriwijaya": 46983,
+        "lion": null,
+        "citilink": 63411,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 28,
+        "kota": "LABUHAN BAJO",
+        "code": "LBJ",
+        "garuda": 36327,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 50535,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 29,
+        "kota": "TUAL",
+        "code": "LUV",
+        "garuda": 106368,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 30,
+        "kota": "PADANG",
+        "code": "PDG",
+        "garuda": 23895,
+        "sriwijaya": 20232,
+        "lion": null,
+        "citilink": 25338,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 31,
+        "kota": "PALEMBANG",
+        "code": "PLM",
+        "garuda": 21009,
+        "sriwijaya": null,
+        "lion": 26310,
+        "citilink": 18688,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 32,
+        "kota": "PALU",
+        "code": "PLW",
+        "garuda": null,
+        "sriwijaya": 50091,
+        "lion": null,
+        "citilink": 60181,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 33,
+        "kota": "PANGKAL PINANG",
+        "code": "PGK",
+        "garuda": 23895,
+        "sriwijaya": 25671,
+        "lion": null,
+        "citilink": 25338,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 34,
+        "kota": "PANGKALAN BUN",
+        "code": "PKN",
+        "garuda": 24783,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 35333,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 35,
+        "kota": "PEKANBARU",
+        "code": "PKU",
+        "garuda": 25449,
+        "sriwijaya": null,
+        "lion": 29056,
+        "citilink": 27780,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 36,
+        "kota": "PONTIANAK",
+        "code": "PNK",
+        "garuda": 31554,
+        "sriwijaya": null,
+        "lion": 27947,
+        "citilink": 27382,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 37,
+        "kota": "PALANGKARAYA",
+        "code": "PKY",
+        "garuda": 33330,
+        "sriwijaya": null,
+        "lion": 42487,
+        "citilink": 30666,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 38,
+        "kota": "LAMPUNG",
+        "code": "TKG",
+        "garuda": 20343,
+        "sriwijaya": 16347,
+        "lion": null,
+        "citilink": 18345,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 39,
+        "kota": "TERNATE",
+        "code": "TTE",
+        "garuda": 60414,
+        "sriwijaya": null,
+        "lion": 54975,
+        "citilink": 66896,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 40,
+        "kota": "TIMIKA",
+        "code": "TIM",
+        "garuda": 91605,
+        "sriwijaya": null,
+        "lion": 79617,
+        "citilink": 77952,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 41,
+        "kota": "GORONTALO",
+        "code": "GTO",
+        "garuda": 55197,
+        "sriwijaya": null,
+        "lion": 46539,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 42,
+        "kota": "SEMARANG",
+        "code": "SRG",
+        "garuda": 15459,
+        "sriwijaya": 16236,
+        "lion": null,
+        "citilink": 16680,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 43,
+        "kota": "SOLO",
+        "code": "SOC",
+        "garuda": 24561,
+        "sriwijaya": 15459,
+        "lion": null,
+        "citilink": 26670,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 44,
+        "kota": "JOGJAKARTA",
+        "code": "JOG",
+        "garuda": 24006,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 21841,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 45,
+        "kota": "KULONPROGO",
+        "code": "YIA",
+        "garuda": null,
+        "sriwijaya": 15459,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 46,
+        "kota": "TANJUNG PANDAN",
+        "code": "TJQ",
+        "garuda": 21564,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 24894,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 47,
+        "kota": "TANJUNG PINANG",
+        "code": "TNJ",
+        "garuda": 31998,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 43209,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 48,
+        "kota": "TARAKAN",
+        "code": "TRK",
+        "garuda": 62867,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": 39768,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 49,
+        "kota": "SAMPIT",
+        "code": "SMQ",
+        "garuda": null,
+        "sriwijaya": 30333,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "1-2 HARI"
+    },
+    {
+        "no": 50,
+        "kota": "WAINGAPU",
+        "code": "WGP",
+        "garuda": 56973,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 51,
+        "kota": "SAUMLAKI",
+        "code": "SXK",
+        "garuda": 107367,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 52,
+        "kota": "NABIRE",
+        "code": "NBX",
+        "garuda": 86721,
+        "sriwijaya": null,
+        "lion": 143109,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 53,
+        "kota": "FAK FAK",
+        "code": "FAK",
+        "garuda": 101262,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 54,
+        "kota": "BAU BAU",
+        "code": "BUW",
+        "garuda": 53532,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 55,
+        "kota": "LARANTUKA",
+        "code": "LKA",
+        "garuda": 68073,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 56,
+        "kota": "ATAMBUA",
+        "code": "ABU",
+        "garuda": 68073,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 57,
+        "kota": "ALOR",
+        "code": "ARD",
+        "garuda": 68073,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 58,
+        "kota": "MAMUJU",
+        "code": "MJU",
+        "garuda": 51645,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 59,
+        "kota": "ROTE",
+        "code": "RTI",
+        "garuda": 99264,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 60,
+        "kota": "SAMARINDA",
+        "code": "SRI\/AAP",
+        "garuda": 38436,
+        "sriwijaya": 33885,
+        "lion": null,
+        "citilink": 38103,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 61,
+        "kota": "TOLI TOLI",
+        "code": "TLI",
+        "garuda": 64299,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 62,
+        "kota": "BATULICIN",
+        "code": "BTW",
+        "garuda": 50202,
+        "sriwijaya": null,
+        "lion": null,
+        "citilink": null,
+        "lead_time": "2-3 HARI"
+    },
+    {
+        "no": 63,
+        "kota": "SORONG",
+        "code": "SOQ",
+        "garuda": 73068,
+        "sriwijaya": 63633,
+        "lion": null,
+        "citilink": 61524,
+        "lead_time": ""
+    }
+]

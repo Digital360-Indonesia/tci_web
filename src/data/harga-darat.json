@@ -1,0 +1,1090 @@
+[
+    {
+        "no": 1,
+        "provinsi": "JAWA TIMUR",
+        "kota": "PACITAN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 2,
+        "provinsi": "JAWA TIMUR",
+        "kota": "PONOROGO",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 3,
+        "provinsi": "JAWA TIMUR",
+        "kota": "TRENGGALEK",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 4,
+        "provinsi": "JAWA TIMUR",
+        "kota": "TULUNGAGUNG",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 5,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BLITAR",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 6,
+        "provinsi": "JAWA TIMUR",
+        "kota": "KEDIRI",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 7,
+        "provinsi": "JAWA TIMUR",
+        "kota": "MALANG",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 8,
+        "provinsi": "JAWA TIMUR",
+        "kota": "LUMAJANG",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 9,
+        "provinsi": "JAWA TIMUR",
+        "kota": "JEMBER",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 10,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BANYUWANGI",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 11,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BONDOWOSO",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 12,
+        "provinsi": "JAWA TIMUR",
+        "kota": "SITUBONDO",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 13,
+        "provinsi": "JAWA TIMUR",
+        "kota": "PROBOLINGGO",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 14,
+        "provinsi": "JAWA TIMUR",
+        "kota": "PASURUAN",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 15,
+        "provinsi": "JAWA TIMUR",
+        "kota": "SIDOARJO",
+        "harga": 3000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 16,
+        "provinsi": "JAWA TIMUR",
+        "kota": "MOJOKERTO",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 17,
+        "provinsi": "JAWA TIMUR",
+        "kota": "JOMBANG",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 18,
+        "provinsi": "JAWA TIMUR",
+        "kota": "NGANJUK",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 19,
+        "provinsi": "JAWA TIMUR",
+        "kota": "MADIUN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 20,
+        "provinsi": "JAWA TIMUR",
+        "kota": "MAGETAN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 21,
+        "provinsi": "JAWA TIMUR",
+        "kota": "NGAWI",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 22,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BOJONEGORO",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 23,
+        "provinsi": "JAWA TIMUR",
+        "kota": "TUBAN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 24,
+        "provinsi": "JAWA TIMUR",
+        "kota": "LAMONGAN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 25,
+        "provinsi": "JAWA TIMUR",
+        "kota": "GRESIK",
+        "harga": 4500,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 26,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BANGKALAN",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 27,
+        "provinsi": "JAWA TIMUR",
+        "kota": "SAMPANG",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 28,
+        "provinsi": "JAWA TIMUR",
+        "kota": "PAMEKASAN",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 29,
+        "provinsi": "JAWA TIMUR",
+        "kota": "SUMENEP",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 30,
+        "provinsi": "JAWA TIMUR",
+        "kota": "SURABAYA",
+        "harga": 3000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 31,
+        "provinsi": "JAWA TIMUR",
+        "kota": "BATU",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "1-2 Hari"
+    },
+    {
+        "no": 32,
+        "provinsi": "JAWA BARAT",
+        "kota": "BANDUNG",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 33,
+        "provinsi": "JAWA BARAT",
+        "kota": "BANDUNG BARAT",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 34,
+        "provinsi": "JAWA BARAT",
+        "kota": "BEKASI",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 35,
+        "provinsi": "JAWA BARAT",
+        "kota": "BOGOR",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 36,
+        "provinsi": "JAWA BARAT",
+        "kota": "CIAMIS",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 37,
+        "provinsi": "JAWA BARAT",
+        "kota": "CIANJUR",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 38,
+        "provinsi": "JAWA BARAT",
+        "kota": "CIREBON",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 39,
+        "provinsi": "JAWA BARAT",
+        "kota": "GARUT",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 40,
+        "provinsi": "JAWA BARAT",
+        "kota": "INDRAMAYU",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 41,
+        "provinsi": "JAWA BARAT",
+        "kota": "KARAWANG",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 42,
+        "provinsi": "JAWA BARAT",
+        "kota": "KUNINGAN",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 43,
+        "provinsi": "JAWA BARAT",
+        "kota": "MAJALENGKA",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 44,
+        "provinsi": "JAWA BARAT",
+        "kota": "PANGANDARAN",
+        "harga": 10000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 45,
+        "provinsi": "JAWA BARAT",
+        "kota": "PURWAKARTA",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 46,
+        "provinsi": "JAWA BARAT",
+        "kota": "SUBANG",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 47,
+        "provinsi": "JAWA BARAT",
+        "kota": "SUKABUMI",
+        "harga": 8500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 48,
+        "provinsi": "JAWA BARAT",
+        "kota": "SUMEDANG",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 49,
+        "provinsi": "JAWA BARAT",
+        "kota": "TASIKMALAYA",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 50,
+        "provinsi": "JAWA BARAT",
+        "kota": "DEPOK",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 51,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BANJARNEGARA",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 52,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BANYUMAS",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 53,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BATANG",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 54,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BLORA",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 55,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BOYOLALI",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 56,
+        "provinsi": "JAWA TENGAH",
+        "kota": "BREBES",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 57,
+        "provinsi": "JAWA TENGAH",
+        "kota": "CILACAP",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 58,
+        "provinsi": "JAWA TENGAH",
+        "kota": "DEMAK",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 59,
+        "provinsi": "JAWA TENGAH",
+        "kota": "GROBOGAN",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 60,
+        "provinsi": "JAWA TENGAH",
+        "kota": "JEPARA",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 61,
+        "provinsi": "JAWA TENGAH",
+        "kota": "KARANGANYAR",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 62,
+        "provinsi": "JAWA TENGAH",
+        "kota": "KEBUMEN",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 63,
+        "provinsi": "JAWA TENGAH",
+        "kota": "KENDAL",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 64,
+        "provinsi": "JAWA TENGAH",
+        "kota": "KLATEN",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 65,
+        "provinsi": "JAWA TENGAH",
+        "kota": "KUDUS",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 66,
+        "provinsi": "JAWA TENGAH",
+        "kota": "MAGELANG",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 67,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PATI",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 68,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PEKALONGAN",
+        "harga": 6500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 69,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PEMALANG",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 70,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PURBALINGGA",
+        "harga": 7500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 71,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PURWOREJO",
+        "harga": 7500,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 72,
+        "provinsi": "JAWA TENGAH",
+        "kota": "REMBANG",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 73,
+        "provinsi": "JAWA TENGAH",
+        "kota": "SEMARANG",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 74,
+        "provinsi": "JAWA TENGAH",
+        "kota": "SRAGEN",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 75,
+        "provinsi": "JAWA TENGAH",
+        "kota": "SUKOHARJO",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 76,
+        "provinsi": "JAWA TENGAH",
+        "kota": "TEGAL",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 77,
+        "provinsi": "JAWA TENGAH",
+        "kota": "TEMANGGUNG",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 78,
+        "provinsi": "JAWA TENGAH",
+        "kota": "WONOGIRI",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 79,
+        "provinsi": "JAWA TENGAH",
+        "kota": "SALATIGA",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 80,
+        "provinsi": "JAWA TENGAH",
+        "kota": "SURAKARTA",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 81,
+        "provinsi": "JAWA TENGAH",
+        "kota": "PURWOKERTO",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 82,
+        "provinsi": "DIY JOGJAKARTA",
+        "kota": "BANTUL",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 83,
+        "provinsi": "DIY JOGJAKARTA",
+        "kota": "GUNUNGKIDUL",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 84,
+        "provinsi": "DIY JOGJAKARTA",
+        "kota": "KULONPROGO",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 85,
+        "provinsi": "DIY JOGJAKARTA",
+        "kota": "SLEMAN",
+        "harga": 7000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 86,
+        "provinsi": "DIY JOGJAKARTA",
+        "kota": "JOGJAKARTA",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 87,
+        "provinsi": "DKI JAKARTA",
+        "kota": "KEPULAUAN SERIBU",
+        "harga": null,
+        "min_charge": null,
+        "lead_time": "-"
+    },
+    {
+        "no": 88,
+        "provinsi": "DKI JAKARTA",
+        "kota": "JAKARTA BARAT",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 89,
+        "provinsi": "DKI JAKARTA",
+        "kota": "JAKARTA PUSAT",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 90,
+        "provinsi": "DKI JAKARTA",
+        "kota": "JAKARTA SELATAN",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 91,
+        "provinsi": "DKI JAKARTA",
+        "kota": "JAKARTA TIMUR",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 92,
+        "provinsi": "DKI JAKARTA",
+        "kota": "JAKARTA UTARA",
+        "harga": 8000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 93,
+        "provinsi": "BANTEN",
+        "kota": "LEBAK",
+        "harga": 10000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 94,
+        "provinsi": "BANTEN",
+        "kota": "PANDEGLANG",
+        "harga": 10000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 95,
+        "provinsi": "BANTEN",
+        "kota": "SERANG",
+        "harga": 9000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 96,
+        "provinsi": "BANTEN",
+        "kota": "TANGERANG",
+        "harga": 9000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 97,
+        "provinsi": "BANTEN",
+        "kota": "CILEGON",
+        "harga": 10000,
+        "min_charge": 30,
+        "lead_time": "3-4 Hari"
+    },
+    {
+        "no": 98,
+        "provinsi": "BALI",
+        "kota": "BADUNG",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 99,
+        "provinsi": "BALI",
+        "kota": "BANGLI",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 100,
+        "provinsi": "BALI",
+        "kota": "BULELENG",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 101,
+        "provinsi": "BALI",
+        "kota": "GIANYAR",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 102,
+        "provinsi": "BALI",
+        "kota": "JEMBRANA",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 103,
+        "provinsi": "BALI",
+        "kota": "KARANGASEM",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 104,
+        "provinsi": "BALI",
+        "kota": "TABANAN",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 105,
+        "provinsi": "BALI",
+        "kota": "DENPASAR",
+        "harga": 5000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 106,
+        "provinsi": "BALI",
+        "kota": "KLUNGKUNG",
+        "harga": 6000,
+        "min_charge": 30,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 107,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "BIMA",
+        "harga": 20000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 108,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "DOMPU",
+        "harga": 20000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 109,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "LOMBOK BARAT",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "5-6 Hari"
+    },
+    {
+        "no": 110,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "LOMBOK TENGAH",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "5-6 Hari"
+    },
+    {
+        "no": 111,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "LOMBOK TIMUR",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "5-6 Hari"
+    },
+    {
+        "no": 112,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "LOMBOK UTARA",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "5-6 Hari"
+    },
+    {
+        "no": 113,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "SUMBAWA",
+        "harga": 20000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 114,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "SUMBAWA BARAT",
+        "harga": 20000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 115,
+        "provinsi": "NUSA TENGGARA BARAT",
+        "kota": "MATARAM",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "2-3 Hari"
+    },
+    {
+        "no": 116,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "ALOR",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 117,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "BELU",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 118,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "ENDE",
+        "harga": 13000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 119,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "FLORES TIMUR",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 120,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "KUPANG",
+        "harga": 10000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 121,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "LEMBATA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 122,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "MALAKA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 123,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "MANGGARAI",
+        "harga": 13000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 124,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "MANGGARAI BARAT",
+        "harga": 13000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 125,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "MANGGARAI TIMUR",
+        "harga": 13000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 126,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "NGADA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 127,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "ROTE NDAO",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 128,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SABU RAIJUA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 129,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SIKKA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 130,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SUMBA BARAT",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 131,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SUMBA BARAT DAYA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 132,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SUMBA TENGAH",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 133,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "SUMBA TIMUR",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 134,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "TIMOR TENGAH SELATAN",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 135,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "TIMOR TENGAH UTARA",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    },
+    {
+        "no": 136,
+        "provinsi": "NUSA TENGGARA TIMUR",
+        "kota": "NAGEKEO",
+        "harga": 15000,
+        "min_charge": 50,
+        "lead_time": "7-8 Hari"
+    }
+]
