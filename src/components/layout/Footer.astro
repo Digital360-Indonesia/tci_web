@@ -20,7 +20,7 @@ const otherLinks = [
 ];
 ---
 
-<footer class="bg-primary text-white">
+<footer class="bg-primary text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4">
 
     <!-- Row 1: Tagline -->
@@ -111,7 +111,32 @@ const otherLinks = [
     </div>
 
     <!-- Row 3: Ghost Brand Name -->
-    <div class="py-8">
+    <div class="py-8 relative">
+      <!-- Animated planes -->
+      <div class="footer-plane-1 pointer-events-none" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect x="8" y="16" width="24" height="5" rx="2.5" fill="white"/>
+          <path d="M15 16 L9 7 L20 7 L20 16 Z" fill="white" opacity="0.8"/>
+          <path d="M15 21 L9 30 L20 30 L20 21 Z" fill="white" opacity="0.8"/>
+          <path d="M8 16 L4 10 L11 10 L11 16 Z" fill="white" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="footer-plane-2 pointer-events-none" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <rect x="8" y="16" width="24" height="5" rx="2.5" fill="white"/>
+          <path d="M15 16 L9 7 L20 7 L20 16 Z" fill="white" opacity="0.8"/>
+          <path d="M15 21 L9 30 L20 30 L20 21 Z" fill="white" opacity="0.8"/>
+          <path d="M8 16 L4 10 L11 10 L11 16 Z" fill="white" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="footer-plane-3 pointer-events-none" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+          <rect x="8" y="16" width="24" height="5" rx="2.5" fill="white"/>
+          <path d="M15 16 L9 7 L20 7 L20 16 Z" fill="white" opacity="0.8"/>
+          <path d="M15 21 L9 30 L20 30 L20 21 Z" fill="white" opacity="0.8"/>
+          <path d="M8 16 L4 10 L11 10 L11 16 Z" fill="white" opacity="0.6"/>
+        </svg>
+      </div>
       <p class="footer-brand-text text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-widest select-none whitespace-nowrap">
         Terminal Cargo Indonesia
       </p>
@@ -142,5 +167,54 @@ const otherLinks = [
   .footer-brand-text:hover {
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
     color: rgba(255, 255, 255, 0.85);
+  }
+
+  .footer-plane-1 {
+    position: absolute;
+    top: 0;
+    left: -60px;
+    animation: footerFly1 20s linear infinite;
+  }
+  .footer-plane-2 {
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    animation: footerFly2 25s linear infinite;
+    animation-delay: -8s;
+  }
+  .footer-plane-3 {
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    animation: footerFly3 30s linear infinite;
+    animation-delay: -16s;
+  }
+
+  @keyframes footerFly1 {
+    0% { transform: translate(0, 20px) rotate(-5deg); opacity: 0; }
+    5% { opacity: 0.6; }
+    25% { transform: translate(25vw, -30px) rotate(0deg); }
+    50% { transform: translate(50vw, -50px) rotate(3deg); }
+    75% { transform: translate(75vw, -30px) rotate(0deg); }
+    90% { opacity: 0.6; }
+    100% { transform: translate(100vw, 20px) rotate(-5deg); opacity: 0; }
+  }
+  @keyframes footerFly2 {
+    0% { transform: translate(0, 30px) rotate(-3deg); opacity: 0; }
+    5% { opacity: 0.4; }
+    25% { transform: translate(30vw, -15px) rotate(2deg); }
+    50% { transform: translate(55vw, -40px) rotate(-2deg); }
+    75% { transform: translate(80vw, -10px) rotate(1deg); }
+    90% { opacity: 0.4; }
+    100% { transform: translate(100vw, 25px) rotate(-3deg); opacity: 0; }
+  }
+  @keyframes footerFly3 {
+    0% { transform: translate(0, 15px) rotate(-4deg); opacity: 0; }
+    5% { opacity: 0.3; }
+    25% { transform: translate(20vw, -20px) rotate(1deg); }
+    50% { transform: translate(45vw, -35px) rotate(-1deg); }
+    75% { transform: translate(70vw, -25px) rotate(2deg); }
+    90% { opacity: 0.3; }
+    100% { transform: translate(100vw, 10px) rotate(-4deg); opacity: 0; }
   }
 </style>
