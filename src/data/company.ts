@@ -112,5 +112,7 @@ export const SITE = {
     years: 2014,
     shipments: '160k++',
     satisfaction: '99%',
+    destinations: '507',
+    partners: '7+',
   },
 };
