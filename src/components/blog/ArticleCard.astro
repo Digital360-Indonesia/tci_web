@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  featuredImage?: string;
+  ogImage?: string;
+  author: string;
+}
+
+const { title, slug, excerpt, date, category, featuredImage = '', ogImage = '', author } = Astro.props;
+
+const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr);
+  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+const categoryLabels: Record<string, string> = {
+  edukasi: 'Edukasi',
+  promosi: 'Promosi',
+  'tips-trik': 'Tips & Trik',
+};
+
+const categoryLabel = categoryLabels[category] || category;
+const imageSrc = featuredImage || ogImage || '';
+const hasImage = imageSrc && imageSrc.startsWith('/images/');
+---
+
+<a href={`/${slug}/`} class="block group">
+  <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+    <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+      {hasImage ? (
+        <div class="relative w-full h-full">
+          <div class="skeleton absolute inset-0 z-10"></div>
+          <img
+            src={imageSrc}
+            alt={title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-0"
+            loading="lazy"
+            onload="this.style.opacity='1';this.previousElementSibling.style.display='none'"
+          />
+        </div>
+      ) : (
+        <div class="w-full h-full bg-gradient-to-br from-primary to-primary-400 flex items-center justify-center">
+          <span class="text-white/80 text-3xl font-bold tracking-wider">TCI</span>
+        </div>
+      )}
+      <span class="absolute top-3 left-3 bg-accent text-white text-xs font-semibold px-2.5 py-1 rounded-full z-20">
+        {categoryLabel}
+      </span>
+    </div>
+    <div class="p-5">
+      <h3 class="font-bold text-gray-900 text-lg leading-snug line-clamp-2 group-hover:text-accent transition-colors mb-2">
+        {title}
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+        {excerpt}
+      </p>
+      <div class="flex items-center justify-between text-xs text-gray-400">
+        <time datetime={date}>{formatDate(date)}</time>
+        <span>{author}</span>
+      </div>
+    </div>
+  </article>
+</a>

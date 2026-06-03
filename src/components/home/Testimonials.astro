@@ -1,0 +1,58 @@
+---
+import { SITE } from '../../data/company';
+---
+
+<section class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="inline-block text-accent uppercase tracking-widest text-xs md:text-sm font-semibold mb-3">
+        Testimoni
+      </span>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary">
+        Apa Kata Pelanggan Kami
+      </h2>
+    </div>
+
+    <div class="md:hidden overflow-x-auto snap-x snap-mandatory flex gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
+      {SITE.testimonials.map((t) => (
+        <div class="snap-center flex-shrink-0 w-[85vw] max-w-sm">
+          <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm h-full relative">
+            <svg class="w-8 h-8 text-accent/20 mb-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/>
+            </svg>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5">{t.quote}</p>
+            <div class="flex items-center gap-3">
+              <img src={t.avatar} alt={t.name} class="w-10 h-10 rounded-full object-cover" loading="lazy" />
+              <span class="font-bold text-primary text-sm">{t.name}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="hidden md:grid grid-cols-3 gap-6 lg:gap-8">
+      {SITE.testimonials.slice(0, 3).map((t) => (
+        <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm card-hover relative">
+          <svg class="w-8 h-8 text-accent/20 mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/>
+          </svg>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">{t.quote}</p>
+          <div class="flex items-center gap-3">
+            <img src={t.avatar} alt={t.name} class="w-10 h-10 rounded-full object-cover" loading="lazy" />
+            <span class="font-bold text-primary text-sm">{t.name}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>

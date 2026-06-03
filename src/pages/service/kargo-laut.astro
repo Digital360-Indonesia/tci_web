@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Layout from '../../components/layout/Layout.astro';
+import ServiceDetail from '../../components/service/ServiceDetail.astro';
+import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
+import { SITE } from '../../data/company';
+---
+
+<BaseLayout title="Kargo Laut" description={SITE.description}>
+  <Layout>
+    <ServiceDetail
+      title="Kargo Laut"
+      image="/images/tci_layanan_cargo_laut.png"
+      description="Pengiriman barang laut dengan kapal reguler atau kontainer untuk keamanan dan harga terjangkau, melalui kapal cepat RORO dan PELNI."
+      slug="kargo-laut"
+      features={["Regular shipping", "Container service", "RORO & PELNI"]}
+      strengths={["Most economical", "Safe for heavy cargo", "Island-wide coverage"]}
+    />
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>

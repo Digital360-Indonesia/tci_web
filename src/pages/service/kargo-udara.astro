@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Layout from '../../components/layout/Layout.astro';
+import ServiceDetail from '../../components/service/ServiceDetail.astro';
+import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
+import { SITE } from '../../data/company';
+---
+
+<BaseLayout title="Kargo Udara" description={SITE.description}>
+  <Layout>
+    <ServiceDetail
+      title="Kargo Udara"
+      image="/images/service-2-1.jpg"
+      description="Pengiriman barang via udara layanan Door to Door, waktu tunggu 1-2 hari, terjangkau ke seluruh wilayah Indonesia. Rekomendasi Tercepat."
+      slug="kargo-udara"
+      features={["Commercial freight", "Residential freight", "International shipping"]}
+      strengths={["Fast delivery", "Wide network coverage", "Partnership with major airlines"]}
+    />
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>

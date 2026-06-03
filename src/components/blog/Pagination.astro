@@ -1,0 +1,97 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  basePath?: string;
+}
+
+const { currentPage, totalPages, basePath = '/berita' } = Astro.props;
+
+if (totalPages <= 1) return;
+
+function getPageUrl(page: number): string {
+  if (page === 1) return `${basePath}/`;
+  return `${basePath}/page/${page}/`;
+}
+
+function getPages(): (number | 'ellipsis')[] {
+  const pages: (number | 'ellipsis')[] = [];
+
+  if (totalPages <= 7) {
+    for (let i = 1; i <= totalPages; i++) pages.push(i);
+    return pages;
+  }
+
+  pages.push(1);
+
+  if (currentPage > 3) pages.push('ellipsis');
+
+  const start = Math.max(2, currentPage - 1);
+  const end = Math.min(totalPages - 1, currentPage + 1);
+
+  for (let i = start; i <= end; i++) pages.push(i);
+
+  if (currentPage < totalPages - 2) pages.push('ellipsis');
+
+  pages.push(totalPages);
+
+  return pages;
+}
+
+const pages = getPages();
+const hasPrev = currentPage > 1;
+const hasNext = currentPage < totalPages;
+---
+
+<nav aria-label="Pagination" class="flex items-center justify-center gap-1.5 mt-10">
+  {hasPrev ? (
+    <a
+      href={getPageUrl(currentPage - 1)}
+      class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-accent hover:bg-accent-50 rounded-lg transition-colors"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      <span class="hidden sm:inline">Sebelumnya</span>
+    </a>
+  ) : (
+    <span class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 cursor-not-allowed">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      <span class="hidden sm:inline">Sebelumnya</span>
+    </span>
+  )}
+
+  <div class="flex items-center gap-1">
+    {pages.map((page) => (
+      page === 'ellipsis' ? (
+        <span class="px-2 py-2 text-gray-400 text-sm">&hellip;</span>
+      ) : (
+        <a
+          href={getPageUrl(page)}
+          class:list={[
+            'min-w-[36px] h-9 flex items-center justify-center text-sm font-medium rounded-lg transition-colors',
+            page === currentPage
+              ? 'bg-accent text-white shadow-md'
+              : 'text-gray-600 hover:text-accent hover:bg-accent-50'
+          ]}
+          aria-current={page === currentPage ? 'page' : undefined}
+        >
+          {page}
+        </a>
+      )
+    ))}
+  </div>
+
+  {hasNext ? (
+    <a
+      href={getPageUrl(currentPage + 1)}
+      class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-accent hover:bg-accent-50 rounded-lg transition-colors"
+    >
+      <span class="hidden sm:inline">Selanjutnya</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  ) : (
+    <span class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 cursor-not-allowed">
+      <span class="hidden sm:inline">Selanjutnya</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </span>
+  )}
+</nav>

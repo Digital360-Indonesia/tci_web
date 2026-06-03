@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Layout from '../../../components/layout/Layout.astro';
+import Breadcrumb from '../../../components/shared/Breadcrumb.astro';
+import ArticleCard from '../../../components/blog/ArticleCard.astro';
+import Pagination from '../../../components/blog/Pagination.astro';
+import Sidebar from '../../../components/blog/Sidebar.astro';
+import WhatsAppButton from '../../../components/shared/WhatsAppButton.astro';
+import { SITE } from '../../../data/company';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 9;
+  const allPosts = await getCollection('blog');
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+
+  const paths = [];
+  for (let page = 2; page <= totalPages; page++) {
+    const start = (page - 1) * POSTS_PER_PAGE;
+    const end = start + POSTS_PER_PAGE;
+    paths.push({
+      params: { page: String(page) },
+      props: {
+        pagePosts: sortedPosts.slice(start, end),
+        currentPage: page,
+        totalPages,
+      },
+    });
+  }
+  return paths;
+}
+
+const { pagePosts, currentPage, totalPages } = Astro.props;
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const allCategories = [
+  { slug: 'edukasi', label: 'Edukasi', count: 0 },
+  { slug: 'promosi', label: 'Promosi', count: 0 },
+  { slug: 'tips-trik', label: 'Tips & Trik', count: 0 },
+];
+allCategories.forEach((cat) => {
+  cat.count = sortedPosts.filter((p) => p.data.category === cat.slug).length;
+});
+
+const recentPosts = sortedPosts.slice(0, 5).map((p) => ({
+  title: p.data.title,
+  slug: p.data.slug,
+  date: p.data.date,
+}));
+
+const categoryFilter = [
+  { slug: '', label: 'Semua' },
+  ...allCategories,
+];
+---
+
+<BaseLayout
+  title={`Berita — Halaman ${currentPage}`}
+  description={`Berita dan artikel terbaru seputar logistik dan pengiriman barang — halaman ${currentPage}. ${SITE.name}.`}
+>
+  <Layout>
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <Breadcrumb items={[
+        { label: 'Beranda', href: '/' },
+        { label: 'Berita Terbaru', href: '/berita/' },
+        { label: `Halaman ${currentPage}` },
+      ]} />
+
+      <div class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-primary">Berita Terbaru</h1>
+        <p class="text-gray-500 mt-2">Halaman {currentPage} dari {totalPages}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mb-8" id="category-filter">
+        {categoryFilter.map((cat) => (
+          <a
+            href={cat.slug ? `/berita/?category=${cat.slug}` : '/berita/'}
+            class="category-pill px-4 py-2 text-sm font-medium rounded-full border transition-colors border-gray-200 text-gray-600 hover:border-accent hover:text-accent"
+            data-category={cat.slug}
+          >
+            {cat.label}
+            {cat.slug && (
+              <span class="ml-1 text-xs text-gray-400">({cat.count})</span>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6" id="articles-grid">
+            {pagePosts.map((post: any) => (
+              <div class="article-item" data-category={post.data.category} data-title={post.data.title.toLowerCase()}>
+                <ArticleCard
+                  title={post.data.title}
+                  slug={post.data.slug}
+                  excerpt={post.data.excerpt}
+                  date={post.data.date}
+                  category={post.data.category}
+                  featuredImage={post.data.featuredImage}
+                  ogImage={post.data.ogImage}
+                  author={post.data.author}
+                />
+              </div>
+            ))}
+          </div>
+
+          <Pagination currentPage={currentPage} totalPages={totalPages} />
+        </div>
+
+        <Sidebar categories={allCategories} recentPosts={recentPosts} />
+      </div>
+    </div>
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>
+
+<script>
+  function initFilters(inputId: string) {
+    const searchInput = document.getElementById(inputId) as HTMLInputElement | null;
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      const items = document.querySelectorAll<HTMLElement>('.article-item');
+      items.forEach((item) => {
+        const title = (item.dataset.title || '').toLowerCase();
+        item.style.display = !query || title.includes(query) ? '' : 'none';
+      });
+    });
+  }
+
+  initFilters('blog-search');
+  initFilters('blog-search-mobile');
+
+  const allPill = document.querySelector('.category-pill[data-category=""]');
+  if (allPill) {
+    allPill.classList.add('bg-accent', 'text-white', 'border-accent');
+    allPill.classList.remove('text-gray-600', 'border-gray-200');
+  }
+
+  document.querySelectorAll<HTMLAnchorElement>('.category-pill').forEach((pill) => {
+    pill.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cat = pill.dataset.category || '';
+
+      document.querySelectorAll<HTMLElement>('.category-pill').forEach((p) => {
+        p.classList.remove('bg-accent', 'text-white', 'border-accent');
+        p.classList.add('text-gray-600', 'border-gray-200');
+      });
+      pill.classList.add('bg-accent', 'text-white', 'border-accent');
+      pill.classList.remove('text-gray-600', 'border-gray-200');
+
+      document.querySelectorAll<HTMLElement>('.article-item').forEach((item) => {
+        item.style.display = !cat || item.dataset.category === cat ? '' : 'none';
+      });
+    });
+  });
+</script>

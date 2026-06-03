@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../components/layout/Layout.astro';
+import Breadcrumb from '../components/shared/Breadcrumb.astro';
+import WhatsAppButton from '../components/shared/WhatsAppButton.astro';
+import { SITE } from '../data/company';
+---
+
+<BaseLayout title="Tentang Kami" description={SITE.description}>
+  <Layout>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+      <Breadcrumb items={[{ label: 'Tentang Kami' }]} />
+
+      <img
+        src="/images/tci_tentang_kami.png"
+        alt="Tentang PT Terminal Cargo Indonesia"
+        class="w-full rounded-xl mb-10"
+        loading="lazy"
+      />
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-[#021B43] mb-6">PT Terminal Cargo Indonesia</h1>
+
+      <p class="text-gray-700 leading-relaxed mb-10 max-w-4xl">
+        PT Terminal Cargo Indonesia (TCI) didirikan pada 1 Agustus 2014 sebagai perusahaan forwarding dan ekspedisi yang berbasis di Terminal Cargo T2 Bandara Juanda, Sidoarjo. TCI menyediakan jasa pengiriman barang Port to Port, Port to Door, Door to Door, serta Trucking dari Surabaya ke seluruh Indonesia melalui jalur Udara, Darat, dan Laut. Dengan pengalaman lebih dari 10 tahun, TCI berkomitmen memberikan layanan pengiriman yang handal, efisien, dan terjangkau.
+      </p>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-[#021B43] mb-6">Dokumen Legalitas</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full max-w-2xl border-collapse">
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43] w-40">Notaris</td>
+                <td class="py-3 text-gray-700">{SITE.legal.notaris}</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43]">Nomor</td>
+                <td class="py-3 text-gray-700">{SITE.legal.nomor}</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43]">Kehakiman</td>
+                <td class="py-3 text-gray-700">{SITE.legal.kehakiman}</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43]">No TDP</td>
+                <td class="py-3 text-gray-700">{SITE.legal.noTdp}</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43]">No NPWP</td>
+                <td class="py-3 text-gray-700">{SITE.legal.noNpwp}</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 pr-4 font-semibold text-[#021B43]">No SIUP</td>
+                <td class="py-3 text-gray-700">{SITE.legal.noSiup}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-[#021B43] mb-4">Visi</h2>
+        <ul class="space-y-3">
+          {SITE.vision.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1.5 w-2 h-2 bg-[#FF5001] rounded-full flex-shrink-0"></span>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-[#021B43] mb-4">Misi</h2>
+        <ol class="space-y-3 list-decimal list-inside">
+          {SITE.mission.map((item) => (
+            <li class="text-gray-700">{item}</li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-[#021B43] mb-6">Budaya Perusahaan</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {SITE.culture.map((item) => (
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#FF5001]/30 hover:shadow-md transition-all">
+              <h3 class="text-lg font-bold text-[#021B43] mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>

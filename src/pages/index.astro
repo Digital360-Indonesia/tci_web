@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../components/layout/Layout.astro';
+import Hero from '../components/home/Hero.astro';
+import AboutPreview from '../components/home/AboutPreview.astro';
+import Services from '../components/home/Services.astro';
+import Statistics from '../components/home/Statistics.astro';
+import Testimonials from '../components/home/Testimonials.astro';
+import WhatsAppButton from '../components/shared/WhatsAppButton.astro';
+import { SITE } from '../data/company';
+---
+
+<BaseLayout
+  title={SITE.tagline}
+  description={SITE.description}
+>
+  <Layout>
+    <Hero />
+    <AboutPreview />
+    <Services />
+    <Statistics />
+    <Testimonials />
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>

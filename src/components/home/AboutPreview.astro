@@ -1,0 +1,52 @@
+---
+import { SITE } from '../../data/company';
+---
+
+<section class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div class="relative">
+        <div class="relative z-10">
+          <img
+            src="/images/tci_layanan_cargo_udara.png"
+            alt="Cargo udara Terminal Cargo Indonesia"
+            class="rounded-2xl shadow-xl w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 z-20 w-40 md:w-56">
+          <img
+            src="/images/tci_tentang_cargo_darat.png"
+            alt="Cargo darat Terminal Cargo Indonesia"
+            class="rounded-xl shadow-lg border-4 border-white w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute top-4 left-4 w-24 h-24 bg-accent/10 rounded-full -z-0"></div>
+        <div class="absolute bottom-0 left-0 w-32 h-32 bg-primary/5 rounded-full -z-0"></div>
+      </div>
+
+      <div>
+        <span class="inline-block text-accent uppercase tracking-widest text-xs md:text-sm font-semibold mb-3">
+          Tentang Kami
+        </span>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary leading-tight mb-5">
+          Jasa Cargo Udara Surabaya Termurah &amp; Terpercaya
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-6 text-sm md:text-base">
+          {SITE.description}
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
+          Berdiri sejak {SITE.founded}, kami berkomitmen memberikan layanan pengiriman barang yang aman, cepat, dan terjangkau. Dengan jaringan luas ke seluruh wilayah Indonesia, TCI menjadi mitra logistik terpercaya bagi ribuan pelanggan.
+        </p>
+        <a
+          href="/tentang/"
+          class="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all duration-200"
+        >
+          Ketahui Perusahaan Kami Selengkapnya
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

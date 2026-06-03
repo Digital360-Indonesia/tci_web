@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Layout from '../../components/layout/Layout.astro';
+import ServiceDetail from '../../components/service/ServiceDetail.astro';
+import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
+import { SITE } from '../../data/company';
+---
+
+<BaseLayout title="Kargo Darat" description={SITE.description}>
+  <Layout>
+    <ServiceDetail
+      title="Kargo Darat"
+      image="/images/tci_tentang_cargo_darat.png"
+      description="Pengiriman barang darat dengan mobil box, truck, pickup, kontainer dan lain lain, pilihan terbaik dalam kota dan antar provinsi."
+      slug="kargo-darat"
+      features={["Box truck", "Pickup", "Container", "Full truckload"]}
+      strengths={["Flexible scheduling", "In-city & inter-city", "Cost effective"]}
+    />
+  </Layout>
+  <WhatsAppButton />
+</BaseLayout>

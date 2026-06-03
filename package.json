@@ -1,0 +1,32 @@
+{
+  "name": "tci_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "scrape": "node scripts/scrape-all.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://syanamprox: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@github.com/Digital360-Indonesia/tci_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Digital360-Indonesia/tci_web/issues"
+  },
+  "homepage": "https://github.com/Digital360-Indonesia/tci_web#readme",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.3",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.0"
+  }
+}

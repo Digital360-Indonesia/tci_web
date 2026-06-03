@@ -1,0 +1,79 @@
+---
+interface Props {
+  categories: Array<{ slug: string; label: string; count: number }>;
+  recentPosts: Array<{ title: string; slug: string; date: string }>;
+}
+
+const { categories, recentPosts } = Astro.props;
+
+const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr);
+  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+---
+
+<aside class="hidden lg:block lg:col-span-4">
+  <div class="sticky top-24 space-y-8">
+    <div>
+      <div class="relative">
+        <input
+          id="blog-search"
+          type="text"
+          placeholder="Cari artikel..."
+          class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+        />
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-gray-900 mb-4">Kategori</h3>
+      <ul class="space-y-1">
+        {categories.map((cat) => (
+          <li>
+            <a
+              href={`/berita/?category=${cat.slug}`}
+              class="flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:text-accent hover:bg-accent-50 rounded-lg transition-colors"
+            >
+              <span>{cat.label}</span>
+              <span class="bg-gray-100 text-gray-500 text-xs font-medium px-2 py-0.5 rounded-full">
+                {cat.count}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-gray-900 mb-4">Artikel Terbaru</h3>
+      <ul class="space-y-4">
+        {recentPosts.map((post) => (
+          <li>
+            <a href={`/${post.slug}/`} class="group block">
+              <h4 class="text-sm font-medium text-gray-700 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+                {post.title}
+              </h4>
+              <time class="text-xs text-gray-400 mt-1 block" datetime={post.date}>
+                {formatDate(post.date)}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<div class="lg:hidden mb-6">
+  <div class="relative">
+    <input
+      id="blog-search-mobile"
+      type="text"
+      placeholder="Cari artikel..."
+      class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+    />
+    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+  </div>
+</div>
