@@ -6,15 +6,54 @@ import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
 import { SITE } from '../../data/company';
 ---
 
-<BaseLayout title="Kargo Laut" description={SITE.description}>
+<BaseLayout title="Jasa Kargo Laut Surabaya — Terminal Cargo Indonesia" description="Jasa pengiriman kargo laut dari Surabaya ke seluruh Indonesia via kapal reguler, RORO, dan PELNI. Harga ekonomis untuk barang berat dan volume besar.">
   <Layout>
     <ServiceDetail
       title="Kargo Laut"
       image="/images/tci_layanan_cargo_laut.png"
-      description="Pengiriman barang laut dengan kapal reguler atau kontainer untuk keamanan dan harga terjangkau, melalui kapal cepat RORO dan PELNI."
       slug="kargo-laut"
-      features={["Regular shipping", "Container service", "RORO & PELNI"]}
-      strengths={["Most economical", "Safe for heavy cargo", "Island-wide coverage"]}
+      description={`<p class="mb-4">Layanan <strong>jasa kargo laut</strong> Terminal Cargo Indonesia adalah solusi pengiriman barang yang <strong>ekonomis dan aman</strong> dari Surabaya ke seluruh wilayah kepulauan Indonesia. Dengan pilihan kapal reguler, kapal cepat RORO, dan kapal PELNI, kami siap mengangkut barang dalam jumlah besar dengan biaya terjangkau.</p><p class="mb-4">Kargo laut menjadi pilihan tepat untuk pengiriman <strong>barang berat, mesin, kendaraan, material bangunan</strong>, dan barang-barang yang tidak memerlukan kecepatan pengiriman tinggi namun mengutamakan efisiensi biaya. Kapasitas pengiriman laut yang besar memungkinkan kami menawarkan harga yang jauh lebih hemat dibandingkan moda transportasi lainnya.</p><p>Kami juga melayani pengiriman via <strong>kontainer (FCL &amp; LCL)</strong> untuk kebutuhan logistik skala industri. Tim kami berpengalaman dalam menangani dokumentasi pelayaran, pengurusan izin, dan koordinasi dengan pelabuhan tujuan di seluruh Indonesia.</p>`}
+      features={[
+        "Pengiriman via kapal reguler, RORO, dan PELNI",
+        "Layanan kontainer FCL (Full Container Load) & LCL (Less than Container Load)",
+        "Pengiriman kendaraan, mesin, dan barang berat",
+        "Cargo personal & komersial dalam berbagai volume",
+        "Penanganan barang di pelabuhan (stevedoring)",
+        "Dokumentasi & pengurusan izin pelayaran",
+        "Gudang transit di pelabuhan Surabaya",
+        "Asuransi pengiriman laut opsional",
+      ]}
+      strengths={[
+        "Harga paling ekonomis untuk barang berat dan volume besar",
+        "Jaringan ke pulau-pulau terpencil di Indonesia timur",
+        "Pengalaman 10+ tahun menangani cargo laut ke seluruh Nusantara",
+        "Tim ahli yang memahami regulasi pelayaran domestik",
+        "Kerjasama dengan operator kapal dan pelabuhan terpercaya",
+        "Layanan konsultasi gratis untuk menentukan opsi pengiriman terbaik",
+      ]}
+      processSteps={[
+        { title: "Konsultasi & Penawaran", desc: "Hubungi kami dengan detail barang (jenis, berat, dimensi, tujuan). Tim kami akan merekomendasikan jenis kapal dan memberikan penawaran harga." },
+        { title: "Serah Barang & Packing", desc: "Barang dapat diantar ke gudang kami atau kami pickup. Untuk barang khusus, kami sediakan jasa packing dan crating yang memenuhi standar pengiriman laut." },
+        { title: "Pengiriman via Kapal", desc: "Barang dimuat ke kapal sesuai jadwal keberangkatan. Kami urus semua dokumen pelayaran dan koordinasi dengan pelabuhan tujuan." },
+        { title: "Tiba & Pengambilan", desc: "Barang tiba di pelabuhan tujuan. Penerima bisa mengambil sendiri atau gunakan layanan antar kami (Door to Door)." },
+      ]}
+      coverage={[
+        "Balikpapan", "Banjarmasin", "Samarinda", "Tarakan", "Nunukan",
+        "Makassar", "Kendari", "Palu", "Mamuju", "Bone",
+        "Ambon", "Ternate", "Tidore", "Namlea",
+        "Sorong", "Jayapura", "Timika", "Manokwari", "Biak",
+        "Kupang", " Ende", "Maumere", "Larantuka",
+        "Pontianak", "Palangkaraya", "Banjarmasin",
+        "Denpasar", "Lombok", "Bima",
+      ]}
+      faq={[
+        { q: "Berapa lama pengiriman kargo laut dari Surabaya?", a: "Untuk rute Kalimantan dan Sulawesi, estimasi 3–7 hari. Untuk Indonesia Timur (Papua, Maluku) sekitar 7–14 hari. Rute NTT dan Bali sekitar 2–5 hari. Durasi bisa berbeda tergantung jadwal kapal dan cuaca." },
+        { q: "Apakah bisa kirim mobil atau kendaraan via laut?", a: "Ya, kami berpengalaman dalam pengiriman kendaraan roda dua dan roda empat via kapal RORO. Kendaraan akan diikat dan diamankan dengan standar keselamatan pelayaran." },
+        { q: "Apa perbedaan FCL dan LCL?", a: "FCL (Full Container Load) berarti Anda menyewa satu kontainer penuh untuk barang sendiri. LCL (Less than Container Load) berarti barang Anda digabungkan dengan barang lain dalam satu kontainer — lebih hemat untuk volume kecil." },
+        { q: "Apakah ada batasan berat untuk kargo laut?", a: "Tidak ada batasan berat yang ketat seperti kargo udara. Kargo laut bisa mengangkut barang puluhan ton. Untuk barang yang sangat berat atau berukuran besar (over dimension), silakan konsultasikan terlebih dahulu." },
+        { q: "Bagaimana kondisi barang selama di laut?", a: "Barang akan di-packaging sesuai standar pengiriman laut. Untuk barang yang sensitif terhadap kelembapan, kami sarankan menggunakan crating kayu dan plastik shrink wrap. Asuransi juga tersedia untuk perlindungan ekstra." },
+        { q: "Apakah bisa dikirim ke pulau-pulau kecil?", a: "Ya, jaringan kapal kami menjangkau pulau-pulau kecil dan terpencil di seluruh Indonesia, termasuk daerah terluar di Papua, Maluku, dan NTT." },
+      ]}
     />
   </Layout>
   <WhatsAppButton />

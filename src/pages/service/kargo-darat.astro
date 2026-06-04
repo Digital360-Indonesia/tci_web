@@ -6,15 +6,53 @@ import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
 import { SITE } from '../../data/company';
 ---
 
-<BaseLayout title="Kargo Darat" description={SITE.description}>
+<BaseLayout title="Jasa Kargo Darat Surabaya — Terminal Cargo Indonesia" description="Jasa pengiriman kargo darat dari Surabaya ke seluruh Jawa dan Indonesia via truck, pickup, kontainer. Fleksibel untuk dalam kota dan antar provinsi.">
   <Layout>
     <ServiceDetail
       title="Kargo Darat"
       image="/images/tci_tentang_cargo_darat.png"
-      description="Pengiriman barang darat dengan mobil box, truck, pickup, kontainer dan lain lain, pilihan terbaik dalam kota dan antar provinsi."
       slug="kargo-darat"
-      features={["Box truck", "Pickup", "Container", "Full truckload"]}
-      strengths={["Flexible scheduling", "In-city & inter-city", "Cost effective"]}
+      description={`<p class="mb-4">Layanan <strong>jasa kargo darat</strong> Terminal Cargo Indonesia menyediakan solusi pengiriman barang via jalan raya dari Surabaya ke seluruh wilayah Jawa dan Indonesia. Dengan armada yang beragam — mulai dari pickup, mobil box, truk, hingga kontainer — kami siap mengakomodasi kebutuhan pengiriman Anda dalam berbagai skala.</p><p class="mb-4">Kargo darat merupakan pilihan yang <strong>fleksibel dan efisien</strong> untuk pengiriman antar kota di Pulau Jawa maupun lintas provinsi melalui jalur darat dan feri penyeberangan. Jadwal keberangkatan yang lebih sering dan rute yang variatif menjadikan kargo darat sebagai opsi yang dapat diandalkan untuk berbagai jenis kebutuhan logistik.</p><p>Kami melayani pengiriman untuk kebutuhan <strong>personal, UKM, e-commerce, dan industri</strong>. Baik itu barang skala kecil dalam kota maupun pengiriman full truckload antar provinsi, tim kami siap melayani dengan standar keamanan dan ketepatan waktu yang tinggi.</p>`}
+      features={[
+        "Pengiriman dalam kota (Surabaya & sekitarnya)",
+        "Pengiriman antar kota di Jawa via jalan tol",
+        "Pengiriman lintas pulau via feri & roll-on roll-off",
+        "Armada lengkap: pickup, box, truk, wingbox, kontainer",
+        "Layanan Full Truckload (FTL) & Less than Truckload (LTL)",
+        "Pengiriman barang e-commerce & UKM",
+        "Jadwal keberangkatan harian",
+        "Tracking pengiriman real-time",
+      ]}
+      strengths={[
+        "Jadwal keberangkatan fleksibel — bisa hari yang sama",
+        "Harga kompetitif untuk rute-rute di Pulau Jawa",
+        "Armada beragam sesuai kebutuhan volume barang",
+        "Pengalaman 10+ tahun rute darat Jawa & Indonesia",
+        "Driver berpengalaman dan kendaraan terawat",
+        "Layanan konsultasi gratis untuk pemilihan armada yang tepat",
+      ]}
+      processSteps={[
+        { title: "Pesan & Jadwalkan", desc: "Hubungi kami via WhatsApp, tentukan jenis armada dan jadwal pengiriman. Bisa same-day untuk rute dalam kota." },
+        { title: "Pickup Barang", desc: "Driver kami datang ke lokasi Anda untuk memuat barang. Bisa juga Anda antar langsung ke hub kami." },
+        { title: "Pengiriman via Darat", desc: "Barang dikirim sesuai jadwal via jalan tol dan jalur darat. Untuk lintas pulau, barang masuk ke feri." },
+        { title: "Sampai di Tujuan", desc: "Barang tiba di alamat penerima. Konfirmasi pengiriman dikirim ke pengirim secara real-time." },
+      ]}
+      coverage={[
+        "Jakarta", "Bogor", "Bandung", "Semarang", "Yogyakarta",
+        "Solo", "Malang", "Kediri", "Surabaya", "Gresik",
+        "Sidoarjo", "Mojokerto", "Jember", "Banyuwangi",
+        "Denpasar", "Lombok", "Mataram",
+        "Palembang", "Lampung", "Bandar Lampung",
+        "Makassar", "Balikpapan", "Banjarmasin",
+      ]}
+      faq={[
+        { q: "Berapa lama pengiriman kargo darat dari Surabaya ke Jakarta?", a: "Estimasi pengiriman darat Surabaya–Jakarta sekitar 1–2 hari. Untuk rute dalam Jawa Timur biasanya same-day atau 1 hari kerja." },
+        { q: "Tipe kendaraan apa saja yang tersedia?", a: "Kami menyediakan armada pickup (untuk barang kecil), mobil box, truk engkel, truk 6 roda, wingbox, dan truk kontainer. Pilihan kendaraan disesuaikan dengan volume dan jenis barang Anda." },
+        { q: "Apakah bisa kirim ke luar Jawa via darat?", a: "Ya, kami melayani pengiriman ke luar Jawa melalui jalur darat + feri penyeberangan. Rute seperti Surabaya–Denpasar, Surabaya–Lombok, dan Surabaya–Kalimantan sudah kami layani secara reguler." },
+        { q: "Apakah ada minimum order untuk kargo darat?", a: "Tidak ada minimum order. Untuk barang kecil dalam kota, kami bisa menggunakan pickup. Untuk barang besar, kami sediakan truk sesuai kapasitas yang dibutuhkan." },
+        { q: "Bagaimana keamanan barang selama pengiriman?", a: "Barang akan diikat dan diamankan sesuai standar. Untuk barang bernilai tinggi atau rapuh, kami sarankan menggunakan layanan packaging tambahan dan asuransi pengiriman opsional." },
+        { q: "Apakah bisa request pengiriman hari yang sama?", a: "Ya, untuk rute dalam kota Surabaya dan sekitarnya, kami bisa melayani pengiriman same-day. Untuk rute antar kota di Jawa, bisa keesokan harinya tergantung waktu pemesanan." },
+      ]}
     />
   </Layout>
   <WhatsAppButton />

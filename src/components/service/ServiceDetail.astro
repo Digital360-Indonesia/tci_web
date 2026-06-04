@@ -2,6 +2,16 @@
 import Breadcrumb from '../shared/Breadcrumb.astro';
 import { SITE } from '../../data/company';
 
+interface ProcessStep {
+  title: string;
+  desc: string;
+}
+
+interface FAQ {
+  q: string;
+  a: string;
+}
+
 interface Props {
   title: string;
   image: string;
@@ -9,9 +19,12 @@ interface Props {
   slug: string;
   features: string[];
   strengths: string[];
+  processSteps?: ProcessStep[];
+  coverage?: string[];
+  faq?: FAQ[];
 }
 
-const { title, image, description, slug, features, strengths } = Astro.props;
+const { title, image, description, slug, features, strengths, processSteps = [], coverage = [], faq = [] } = Astro.props;
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -21,6 +34,7 @@ const { title, image, description, slug, features, strengths } = Astro.props;
     { label: title },
   ]} />
 
+  <!-- Hero -->
   <div class="relative rounded-xl overflow-hidden mb-10">
     <img
       src={image}
@@ -33,15 +47,17 @@ const { title, image, description, slug, features, strengths } = Astro.props;
     </div>
   </div>
 
-  <p class="text-gray-700 leading-relaxed text-lg mb-12 max-w-4xl">{description}</p>
+  <!-- Description -->
+  <div class="text-gray-700 leading-relaxed text-lg mb-12" set:html={description} />
 
+  <!-- Features & Strengths -->
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
     <div class="bg-gray-50 rounded-xl p-6 sm:p-8 border border-gray-100">
-      <h2 class="text-xl font-bold text-[#021B43] mb-4">Freight Overview</h2>
+      <h2 class="text-xl font-bold text-[#021B43] mb-5">Layanan Kami</h2>
       <ul class="space-y-3">
         {features.map((feature) => (
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#FF5001] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
             <span class="text-gray-700">{feature}</span>
           </li>
         ))}
@@ -49,11 +65,11 @@ const { title, image, description, slug, features, strengths } = Astro.props;
     </div>
 
     <div class="bg-gray-50 rounded-xl p-6 sm:p-8 border border-gray-100">
-      <h2 class="text-xl font-bold text-[#021B43] mb-4">Keunggulan Kami</h2>
+      <h2 class="text-xl font-bold text-[#021B43] mb-5">Keunggulan Kami</h2>
       <ul class="space-y-3">
         {strengths.map((strength) => (
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#FF5001] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="text-gray-700">{strength}</span>
           </li>
         ))}
@@ -61,6 +77,66 @@ const { title, image, description, slug, features, strengths } = Astro.props;
     </div>
   </div>
 
+  <!-- Process Steps -->
+  {processSteps.length > 0 && (
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-[#021B43] mb-8 text-center">Alur Pengiriman</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {processSteps.map((step, i) => (
+          <div class="relative bg-white rounded-xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-full bg-accent text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">
+              {i + 1}
+            </div>
+            <h3 class="font-semibold text-[#021B43] mb-2">{step.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
+            {i < processSteps.length - 1 && (
+              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 text-gray-300">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Coverage Area -->
+  {coverage.length > 0 && (
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-[#021B43] mb-2 text-center">Area Jangkauan</h2>
+      <p class="text-gray-500 text-center mb-8">Rute pengiriman dari Surabaya ke seluruh Indonesia</p>
+      <div class="flex flex-wrap gap-2.5 justify-center max-w-4xl mx-auto">
+        {coverage.map((area) => (
+          <span class="inline-flex items-center gap-1.5 bg-primary/5 border border-primary/10 text-[#021B43] text-sm font-medium px-4 py-2 rounded-full">
+            <svg class="w-3.5 h-3.5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            {area}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- FAQ -->
+  {faq.length > 0 && (
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-[#021B43] mb-8 text-center">Pertanyaan Umum</h2>
+      <div class="max-w-3xl mx-auto space-y-3">
+        {faq.map((item, i) => (
+          <details class="group bg-gray-50 rounded-xl border border-gray-100 overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer px-6 py-4 font-semibold text-[#021B43] hover:bg-gray-100 transition-colors">
+              <span>{item.q}</span>
+              <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-gray-600 leading-relaxed text-sm">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- CTA -->
   <div class="bg-[#021B43] rounded-xl p-8 sm:p-12 text-center">
     <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Tertarik dengan layanan {title}?</h2>
     <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Hubungi kami sekarang untuk konsultasi dan penawaran terbaik.</p>
