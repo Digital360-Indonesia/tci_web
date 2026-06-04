@@ -4,9 +4,18 @@ import Layout from '../components/layout/Layout.astro';
 import Breadcrumb from '../components/shared/Breadcrumb.astro';
 import WhatsAppButton from '../components/shared/WhatsAppButton.astro';
 import { SITE } from '../data/company';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Cek Resi" }
+  ]
+};
 ---
 
-<BaseLayout title="Cek Resi & Lacak Pengiriman" description="Cek resi dan lacak status pengiriman barang Anda melalui Terminal Cargo Indonesia. Pantau kiriman kargo udara, darat, dan laut secara real-time.">
+<BaseLayout title="Cek Resi & Lacak Pengiriman" description="Cek resi dan lacak status pengiriman barang Anda melalui Terminal Cargo Indonesia. Pantau kiriman kargo udara, darat, dan laut secara real-time." jsonLd={[breadcrumbSchema]}>
   <Layout>
     <section class="bg-[#021B43] py-16 sm:py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

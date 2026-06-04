@@ -36,11 +36,21 @@ const categoryFilter = [
   { slug: '', label: 'Semua' },
   ...allCategories,
 ];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Berita" }
+  ]
+};
 ---
 
 <BaseLayout
   title="Blog Berita & Artikel Logistik"
   description="Berita dan artikel terbaru seputar logistik, pengiriman barang, tips ekspedisi, dan panduan cargo dari Terminal Cargo Indonesia. Informasi udara, darat & laut."
+  jsonLd={[breadcrumbSchema]}
 >
   <Layout>
     <div class="max-w-7xl mx-auto px-4 py-8">

@@ -55,11 +55,22 @@ const categoryFilter = [
   { slug: '', label: 'Semua' },
   ...allCategories,
 ];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Berita", "item": SITE.url + "/berita/" },
+    { "@type": "ListItem", "position": 3, "name": `Halaman ${currentPage}` }
+  ]
+};
 ---
 
 <BaseLayout
   title={`Berita — Halaman ${currentPage}`}
   description={`Berita dan artikel terbaru seputar logistik dan pengiriman barang — halaman ${currentPage}. ${SITE.name}.`}
+  jsonLd={[breadcrumbSchema]}
 >
   <Layout>
     <div class="max-w-7xl mx-auto px-4 py-8">

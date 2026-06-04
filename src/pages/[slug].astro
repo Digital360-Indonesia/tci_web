@@ -44,17 +44,67 @@ const categoryLabels: Record<string, string> = {
 let pageTitle = '';
 let pageDescription = '';
 let pageOgImage = '/images/tci_layanan_cargo_udara.png';
+let pageJsonLd: Record<string, unknown>[] = [];
 
 if (isBlog) {
   const post = pageProps.post;
   pageTitle = post.data.title;
   pageDescription = post.data.metaDescription || post.data.excerpt;
   pageOgImage = post.data.ogImage || post.data.featuredImage || '/images/tci_layanan_cargo_udara.png';
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": pageDescription,
+    "image": pageOgImage.startsWith('http') ? pageOgImage : SITE.url + pageOgImage,
+    "datePublished": post.data.date,
+    "dateModified": post.data.modified || post.data.date,
+    "author": {
+      "@type": "Person",
+      "name": post.data.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": SITE.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": SITE.url + "/images/brand/tci-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": SITE.url + "/" + post.data.slug + "/"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+      { "@type": "ListItem", "position": 2, "name": "Berita", "item": SITE.url + "/berita/" },
+      { "@type": "ListItem", "position": 3, "name": post.data.title }
+    ]
+  };
+
+  pageJsonLd = [articleSchema, breadcrumbSchema];
 } else {
   const city = pageProps.city;
   pageTitle = city.title;
   pageDescription = city.metaDescription || `Jasa ekspedisi termurah dari Surabaya ke ${city.cityName}. Pengiriman cargo udara, darat & laut. Door to Door. PT Terminal Cargo Indonesia.`;
   pageOgImage = city.ogImage || '/images/tci_layanan_cargo_udara.png';
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+      { "@type": "ListItem", "position": 2, "name": city.cityName }
+    ]
+  };
+
+  pageJsonLd = [breadcrumbSchema];
 }
 
 let Content: any;
@@ -89,7 +139,7 @@ if (isBlog) {
 }
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} ogImage={pageOgImage}>
+<BaseLayout title={pageTitle} description={pageDescription} ogImage={pageOgImage} jsonLd={pageJsonLd}>
   <Layout>
     {isBlog && blogPost && (
       <article class="max-w-7xl mx-auto px-4 py-8">

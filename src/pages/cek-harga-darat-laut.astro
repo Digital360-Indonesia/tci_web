@@ -2,10 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Layout from '../components/layout/Layout.astro';
 import WhatsAppButton from '../components/shared/WhatsAppButton.astro';
+import { SITE } from '../data/company';
 import data from '../data/harga-darat-laut.json';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Cek Harga Darat & Laut" }
+  ]
+};
 ---
 
-<BaseLayout title="Cek Harga Kargo Darat & Laut" description="Cek harga pengiriman kargo darat & laut dari Surabaya ke seluruh Indonesia. Kombinasi trucking dan kapal untuk efisiensi biaya. PT Terminal Cargo Indonesia.">
+<BaseLayout title="Cek Harga Kargo Darat & Laut" description="Cek harga pengiriman kargo darat & laut dari Surabaya ke seluruh Indonesia. Kombinasi trucking dan kapal untuk efisiensi biaya. PT Terminal Cargo Indonesia." jsonLd={[breadcrumbSchema]}>
   <Layout>
     <section class="bg-[#021B43] py-16 sm:py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
