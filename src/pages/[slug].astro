@@ -53,7 +53,7 @@ if (isBlog) {
 } else {
   const city = pageProps.city;
   pageTitle = city.title;
-  pageDescription = city.metaDescription || city.title;
+  pageDescription = city.metaDescription || `Jasa ekspedisi termurah dari Surabaya ke ${city.cityName}. Pengiriman cargo udara, darat & laut. Door to Door. PT Terminal Cargo Indonesia.`;
   pageOgImage = city.ogImage || '/images/tci_layanan_cargo_udara.png';
 }
 

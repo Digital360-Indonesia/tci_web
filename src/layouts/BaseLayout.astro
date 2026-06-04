@@ -7,11 +7,71 @@ interface Props {
   description?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title = SITE.name, description = SITE.description, ogImage = '/images/tci_layanan_cargo_udara.png', canonicalUrl } = Astro.props;
-const fullTitle = title === SITE.name ? title : `${title} — ${SITE.name}`;
+const { title = SITE.name, description = SITE.description, ogImage = '/images/tci_layanan_cargo_udara.png', canonicalUrl, jsonLd } = Astro.props;
+const fullTitle = title === SITE.name ? title : `${title} | TCI`;
 const currentUrl = canonicalUrl || Astro.url.href;
+
+// Default Organization schema (always present)
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": SITE.url + "/#organization",
+  "name": SITE.name,
+  "alternateName": "TCI",
+  "url": SITE.url,
+  "logo": SITE.url + "/images/brand/tci-logo.png",
+  "image": SITE.url + ogImage,
+  "description": "PT Terminal Cargo Indonesia — jasa pengiriman cargo udara, darat & laut dari Surabaya ke seluruh Indonesia.",
+  "telephone": SITE.phone,
+  "email": SITE.email,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Terminal Cargo T2 Bandara Juanda",
+    "addressLocality": "Sidoarjo",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "61253",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -7.3816923,
+    "longitude": 112.7703073
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    SITE.social.facebook,
+    SITE.social.instagram
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "IDR",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "founder": {
+    "@type": "Organization",
+    "name": "PT Terminal Cargo Indonesia"
+  },
+  "foundingDate": "2014"
+};
+
+// Merge schemas
+const allSchemas: Record<string, unknown>[] = [orgSchema];
+if (jsonLd) {
+  if (Array.isArray(jsonLd)) {
+    allSchemas.push(...jsonLd);
+  } else {
+    allSchemas.push(jsonLd);
+  }
+}
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -29,7 +89,16 @@ const currentUrl = canonicalUrl || Astro.url.href;
   <meta property="og:url" content={currentUrl} />
   <meta property="og:site_name" content={SITE.name} />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="robots" content="index, follow" />
+  <!-- JSON-LD Structured Data -->
+  {allSchemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
   <!-- GTM -->
   <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M7J6H8GZ');</script>
 </head>

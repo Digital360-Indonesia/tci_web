@@ -7,7 +7,7 @@ modified: "2024-03-06T04:45:56"
 category: "edukasi"
 author: "syanampro"
 excerpt: "Ekspedisi Jakarta &#8211; Apakah kalian kesulitan mencari jasa ekspedisi Jakarta ke Makassar yang murah dan aman? Terminal Cargo Indonesia melayani jasa pengiriman barang, jasa kargo, dan jasa ekspedi"
-metaDescription: "Ekspedisi Jakarta ke Makassar melalui Papandayan Cargo lebih aman, cepat dan terpercaya, Pengiriman via darat, laut dan udara"
+metaDescription: "Ekspedisi Jakarta ke Makassar melalui Terminal Cargo Indonesia lebih aman, cepat dan terpercaya. Pengiriman via darat, laut dan udara"
 featuredImage: "/images/uploads/2024/03/Jasa-Ekspedisi-Jakarta-ke-Makassar.jpg"
 ogImage: "/images/uploads/2024/03/Jasa-Ekspedisi-Jakarta-ke-Makassar.jpg"
 tags: []

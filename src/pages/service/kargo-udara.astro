@@ -4,9 +4,53 @@ import Layout from '../../components/layout/Layout.astro';
 import ServiceDetail from '../../components/service/ServiceDetail.astro';
 import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
 import { SITE } from '../../data/company';
+
+const faqData = [
+  { q: "Berapa lama pengiriman kargo udara dari Surabaya?", a: "Untuk rute utama seperti Jakarta, Denpasar, dan Makassar, estimasi pengiriman 1 hari kerja. Untuk rute lainnya biasanya 1–2 hari kerja, tergantung jadwal penerbangan maskapai." },
+  { q: "Berapa minimal berat barang untuk kargo udara?", a: "Tidak ada minimum berat. Kami menerima pengiriman mulai dari 1 kg. Untuk barang di bawah 10 kg biasanya kami sarankan menggunakan layanan regular, sedangkan barang di atas 10 kg bisa mendapat tarif cargo yang lebih hemat." },
+  { q: "Apakah bisa kirim barang berbahaya via udara?", a: "Ya, kami bisa menangani pengiriman barang berbahaya ( Dangerous Goods ) sesuai regulasi IATA. Silakan konsultasikan jenis barangnya terlebih dahulu agar kami bisa memproses dengan prosedur yang tepat." },
+  { q: "Bagaimana cara cek status pengiriman?", a: "Anda bisa mengecek resi pengiriman langsung di halaman Cek Resi kami atau melalui aplikasi Terminal Cargo Indonesia. Status akan diupdate secara real-time." },
+  { q: "Apakah tersedia layanan Door to Door?", a: "Ya, kami menyediakan layanan Door to Door (DTD) dan Port to Port (PTP). Untuk DTD, barang akan kami pickup dari alamat Anda dan antar ke alamat penerima di kota tujuan." },
+  { q: "Apakah bisa packing di tempat?", a: "Ya, kami menyediakan jasa packaging dan crating. Tim kami bisa datang ke lokasi Anda untuk memastikan barang terpacked dengan aman sesuai standar pengiriman udara." },
+];
+
+const faqEntities = faqData.map((f) => ({
+  "@type": "Question",
+  "name": f.q,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": f.a
+  }
+}));
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kargo Udara",
+  "provider": { "@type": "Organization", "name": "PT Terminal Cargo Indonesia" },
+  "areaServed": { "@type": "Country", "name": "Indonesia" },
+  "serviceType": "Air Cargo"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqEntities
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Kargo Udara" }
+  ]
+};
+
+const jsonLd = [serviceSchema, faqSchema, breadcrumbSchema];
 ---
 
-<BaseLayout title="Jasa Kargo Udara Surabaya — Terminal Cargo Indonesia" description="Jasa pengiriman kargo udara dari Surabaya ke seluruh Indonesia. Layanan Door to Door & Port to Port via pesawat. Estimasi 1-2 hari kerja. Harga termurah.">
+<BaseLayout title="Jasa Kargo Udara Surabaya" description="Jasa pengiriman kargo udara dari Surabaya ke seluruh Indonesia. Layanan Door to Door & Port to Port via pesawat. Estimasi 1-2 hari kerja. Harga termurah." jsonLd={jsonLd}>
   <Layout>
     <ServiceDetail
       title="Kargo Udara"
@@ -44,14 +88,7 @@ import { SITE } from '../../data/company';
         "Lombok", "Solo", "Surabaya", "Malang", "Samarinda",
         "Ambon", "Sorong", "Jayapura", "Timika",
       ]}
-      faq={[
-        { q: "Berapa lama pengiriman kargo udara dari Surabaya?", a: "Untuk rute utama seperti Jakarta, Denpasar, dan Makassar, estimasi pengiriman 1 hari kerja. Untuk rute lainnya biasanya 1–2 hari kerja, tergantung jadwal penerbangan maskapai." },
-        { q: "Berapa minimal berat barang untuk kargo udara?", a: "Tidak ada minimum berat. Kami menerima pengiriman mulai dari 1 kg. Untuk barang di bawah 10 kg biasanya kami sarankan menggunakan layanan regular, sedangkan barang di atas 10 kg bisa mendapat tarif cargo yang lebih hemat." },
-        { q: "Apakah bisa kirim barang berbahaya via udara?", a: "Ya, kami bisa menangani pengiriman barang berbahaya ( Dangerous Goods ) sesuai regulasi IATA. Silakan konsultasikan jenis barangnya terlebih dahulu agar kami bisa memproses dengan prosedur yang tepat." },
-        { q: "Bagaimana cara cek status pengiriman?", a: "Anda bisa mengecek resi pengiriman langsung di halaman Cek Resi kami atau melalui aplikasi Terminal Cargo Indonesia. Status akan diupdate secara real-time." },
-        { q: "Apakah tersedia layanan Door to Door?", a: "Ya, kami menyediakan layanan Door to Door (DTD) dan Port to Port (PTP). Untuk DTD, barang akan kami pickup dari alamat Anda dan antar ke alamat penerima di kota tujuan." },
-        { q: "Apakah bisa packing di tempat?", a: "Ya, kami menyediakan jasa packaging dan crating. Tim kami bisa datang ke lokasi Anda untuk memastikan barang terpacking dengan aman sesuai standar pengiriman udara." },
-      ]}
+      faq={faqData}
     />
   </Layout>
   <WhatsAppButton />

@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Terminal Cargo Indonesia',
-  tagline: 'Jasa Cargo Udara Surabaya Termurah',
-  description: 'PT. Terminal Cargo Indonesia (TCI) adalah perusahaan forwarding dan ekspedisi yang menyediakan jasa pengiriman barang Port to Port, Port to Door, Door to Door, Trucking dari Surabaya ke seluruh Indonesia via Udara, Darat, Laut.',
+  tagline: 'Jasa Cargo Udara, Darat & Laut Surabaya Termurah',
+  description: 'PT Terminal Cargo Indonesia menyediakan jasa pengiriman barang via udara, darat & laut dari Surabaya ke seluruh Indonesia. Door to Door, Port to Port. Harga termurah.',
   url: 'https://terminalcargoindonesia.com',
   whatsapp: '0812 5259 5159',
   whatsappLink: 'https://wa.me/6281252595159',

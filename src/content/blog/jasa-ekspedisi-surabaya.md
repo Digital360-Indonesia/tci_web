@@ -7,7 +7,7 @@ modified: "2024-03-06T03:41:51"
 category: "edukasi"
 author: "syanampro"
 excerpt: "Ekspedisi Surabaya &#8211; Apakah kalian kesulitan mencari jasa ekspedisi Surabaya yang murah dan aman? Terminal Cargo Indonesia melayani jasa pengiriman barang, jasa kargo, dan jasa ekspedisi dari Ko"
-metaDescription: "Ekspedisi Surabaya ke seluruh Indonesia melalui Papandayan Cargo lebih aman, cepat dan terpercaya, Pengiriman via darat, laut dan udara"
+metaDescription: "Ekspedisi Surabaya ke seluruh Indonesia melalui Terminal Cargo Indonesia lebih aman, cepat dan terpercaya. Pengiriman via darat, laut dan udara"
 featuredImage: "/images/uploads/2024/02/jasa-ekspedisi-surabaya.jpg"
 ogImage: "/images/uploads/2024/02/jasa-ekspedisi-surabaya.jpg"
 tags: []

@@ -4,9 +4,53 @@ import Layout from '../../components/layout/Layout.astro';
 import ServiceDetail from '../../components/service/ServiceDetail.astro';
 import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
 import { SITE } from '../../data/company';
+
+const faqData = [
+  { q: "Berapa lama pengiriman kargo laut dari Surabaya?", a: "Untuk rute Kalimantan dan Sulawesi, estimasi 3–7 hari. Untuk Indonesia Timur (Papua, Maluku) sekitar 7–14 hari. Rute NTT dan Bali sekitar 2–5 hari. Durasi bisa berbeda tergantung jadwal kapal dan cuaca." },
+  { q: "Apakah bisa kirim mobil atau kendaraan via laut?", a: "Ya, kami berpengalaman dalam pengiriman kendaraan roda dua dan roda empat via kapal RORO. Kendaraan akan diikat dan diamankan dengan standar keselamatan pelayaran." },
+  { q: "Apa perbedaan FCL dan LCL?", a: "FCL (Full Container Load) berarti Anda menyewa satu kontainer penuh untuk barang sendiri. LCL (Less than Container Load) berarti barang Anda digabungkan dengan barang lain dalam satu kontainer — lebih hemat untuk volume kecil." },
+  { q: "Apakah ada batasan berat untuk kargo laut?", a: "Tidak ada batasan berat yang ketat seperti kargo udara. Kargo laut bisa mengangkut barang puluhan ton. Untuk barang yang sangat berat atau berukuran besar (over dimension), silakan konsultasikan terlebih dahulu." },
+  { q: "Bagaimana kondisi barang selama di laut?", a: "Barang akan di-packaging sesuai standar pengiriman laut. Untuk barang yang sensitif terhadap kelembapan, kami sarankan menggunakan crating kayu dan plastik shrink wrap. Asuransi juga tersedia untuk perlindungan ekstra." },
+  { q: "Apakah bisa dikirim ke pulau-pulau kecil?", a: "Ya, jaringan kapal kami menjangkau pulau-pulau kecil dan terpencil di seluruh Indonesia, termasuk daerah terluar di Papua, Maluku, dan NTT." },
+];
+
+const faqEntities = faqData.map((f) => ({
+  "@type": "Question",
+  "name": f.q,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": f.a
+  }
+}));
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kargo Laut",
+  "provider": { "@type": "Organization", "name": "PT Terminal Cargo Indonesia" },
+  "areaServed": { "@type": "Country", "name": "Indonesia" },
+  "serviceType": "Sea Cargo"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqEntities
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Kargo Laut" }
+  ]
+};
+
+const jsonLd = [serviceSchema, faqSchema, breadcrumbSchema];
 ---
 
-<BaseLayout title="Jasa Kargo Laut Surabaya — Terminal Cargo Indonesia" description="Jasa pengiriman kargo laut dari Surabaya ke seluruh Indonesia via kapal reguler, RORO, dan PELNI. Harga ekonomis untuk barang berat dan volume besar.">
+<BaseLayout title="Jasa Kargo Laut Surabaya" description="Jasa pengiriman kargo laut dari Surabaya ke seluruh Indonesia via kapal reguler, RORO, dan PELNI. Harga ekonomis untuk barang berat dan volume besar." jsonLd={jsonLd}>
   <Layout>
     <ServiceDetail
       title="Kargo Laut"
@@ -46,14 +90,7 @@ import { SITE } from '../../data/company';
         "Pontianak", "Palangkaraya", "Banjarmasin",
         "Denpasar", "Lombok", "Bima",
       ]}
-      faq={[
-        { q: "Berapa lama pengiriman kargo laut dari Surabaya?", a: "Untuk rute Kalimantan dan Sulawesi, estimasi 3–7 hari. Untuk Indonesia Timur (Papua, Maluku) sekitar 7–14 hari. Rute NTT dan Bali sekitar 2–5 hari. Durasi bisa berbeda tergantung jadwal kapal dan cuaca." },
-        { q: "Apakah bisa kirim mobil atau kendaraan via laut?", a: "Ya, kami berpengalaman dalam pengiriman kendaraan roda dua dan roda empat via kapal RORO. Kendaraan akan diikat dan diamankan dengan standar keselamatan pelayaran." },
-        { q: "Apa perbedaan FCL dan LCL?", a: "FCL (Full Container Load) berarti Anda menyewa satu kontainer penuh untuk barang sendiri. LCL (Less than Container Load) berarti barang Anda digabungkan dengan barang lain dalam satu kontainer — lebih hemat untuk volume kecil." },
-        { q: "Apakah ada batasan berat untuk kargo laut?", a: "Tidak ada batasan berat yang ketat seperti kargo udara. Kargo laut bisa mengangkut barang puluhan ton. Untuk barang yang sangat berat atau berukuran besar (over dimension), silakan konsultasikan terlebih dahulu." },
-        { q: "Bagaimana kondisi barang selama di laut?", a: "Barang akan di-packaging sesuai standar pengiriman laut. Untuk barang yang sensitif terhadap kelembapan, kami sarankan menggunakan crating kayu dan plastik shrink wrap. Asuransi juga tersedia untuk perlindungan ekstra." },
-        { q: "Apakah bisa dikirim ke pulau-pulau kecil?", a: "Ya, jaringan kapal kami menjangkau pulau-pulau kecil dan terpencil di seluruh Indonesia, termasuk daerah terluar di Papua, Maluku, dan NTT." },
-      ]}
+      faq={faqData}
     />
   </Layout>
   <WhatsAppButton />

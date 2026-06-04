@@ -7,7 +7,7 @@ modified: "2024-03-06T07:07:34"
 category: "edukasi"
 author: "syanampro"
 excerpt: "Ekspedisi Jakarta &#8211; Apakah kalian kesulitan mencari jasa ekspedisi Jakarta ke Medan yang murah dan aman? Terminal Cargo Indonesia melayani jasa pengiriman barang, jasa kargo, dan jasa ekspedisi "
-metaDescription: "Ekspedisi Jakarta ke Medan melalui Papandayan Cargo lebih aman, cepat dan terpercaya, Pengiriman via darat, laut dan udara"
+metaDescription: "Ekspedisi Jakarta ke Medan melalui Terminal Cargo Indonesia lebih aman, cepat dan terpercaya. Pengiriman via darat, laut dan udara"
 featuredImage: "/images/uploads/2024/03/Jasa-Ekspedisi-Jakarta-ke-Makassar.jpg"
 ogImage: "/images/uploads/2024/03/Jasa-Ekspedisi-Jakarta-ke-Makassar.jpg"
 tags: []

@@ -4,9 +4,53 @@ import Layout from '../../components/layout/Layout.astro';
 import ServiceDetail from '../../components/service/ServiceDetail.astro';
 import WhatsAppButton from '../../components/shared/WhatsAppButton.astro';
 import { SITE } from '../../data/company';
+
+const faqData = [
+  { q: "Berapa lama pengiriman kargo darat dari Surabaya ke Jakarta?", a: "Estimasi pengiriman darat Surabaya–Jakarta sekitar 1–2 hari. Untuk rute dalam Jawa Timur biasanya same-day atau 1 hari kerja." },
+  { q: "Tipe kendaraan apa saja yang tersedia?", a: "Kami menyediakan armada pickup (untuk barang kecil), mobil box, truk engkel, truk 6 roda, wingbox, dan truk kontainer. Pilihan kendaraan disesuaikan dengan volume dan jenis barang Anda." },
+  { q: "Apakah bisa kirim ke luar Jawa via darat?", a: "Ya, kami melayani pengiriman ke luar Jawa melalui jalur darat + feri penyeberangan. Rute seperti Surabaya–Denpasar, Surabaya–Lombok, dan Surabaya–Kalimantan sudah kami layani secara reguler." },
+  { q: "Apakah ada minimum order untuk kargo darat?", a: "Tidak ada minimum order. Untuk barang kecil dalam kota, kami bisa menggunakan pickup. Untuk barang besar, kami sediakan truk sesuai kapasitas yang dibutuhkan." },
+  { q: "Bagaimana keamanan barang selama pengiriman?", a: "Barang akan diikat dan diamankan sesuai standar. Untuk barang bernilai tinggi atau rapuh, kami sarankan menggunakan layanan packaging tambahan dan asuransi pengiriman opsional." },
+  { q: "Apakah bisa request pengiriman hari yang sama?", a: "Ya, untuk rute dalam kota Surabaya dan sekitarnya, kami bisa melayani pengiriman same-day. Untuk rute antar kota di Jawa, bisa keesokan harinya tergantung waktu pemesanan." },
+];
+
+const faqEntities = faqData.map((f) => ({
+  "@type": "Question",
+  "name": f.q,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": f.a
+  }
+}));
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kargo Darat",
+  "provider": { "@type": "Organization", "name": "PT Terminal Cargo Indonesia" },
+  "areaServed": { "@type": "Country", "name": "Indonesia" },
+  "serviceType": "Land Cargo"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqEntities
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": SITE.url },
+    { "@type": "ListItem", "position": 2, "name": "Kargo Darat" }
+  ]
+};
+
+const jsonLd = [serviceSchema, faqSchema, breadcrumbSchema];
 ---
 
-<BaseLayout title="Jasa Kargo Darat Surabaya — Terminal Cargo Indonesia" description="Jasa pengiriman kargo darat dari Surabaya ke seluruh Jawa dan Indonesia via truck, pickup, kontainer. Fleksibel untuk dalam kota dan antar provinsi.">
+<BaseLayout title="Jasa Kargo Darat Surabaya" description="Jasa pengiriman kargo darat dari Surabaya ke seluruh Jawa dan Indonesia via truck, pickup, kontainer. Fleksibel untuk dalam kota dan antar provinsi." jsonLd={jsonLd}>
   <Layout>
     <ServiceDetail
       title="Kargo Darat"
@@ -45,14 +89,7 @@ import { SITE } from '../../data/company';
         "Palembang", "Lampung", "Bandar Lampung",
         "Makassar", "Balikpapan", "Banjarmasin",
       ]}
-      faq={[
-        { q: "Berapa lama pengiriman kargo darat dari Surabaya ke Jakarta?", a: "Estimasi pengiriman darat Surabaya–Jakarta sekitar 1–2 hari. Untuk rute dalam Jawa Timur biasanya same-day atau 1 hari kerja." },
-        { q: "Tipe kendaraan apa saja yang tersedia?", a: "Kami menyediakan armada pickup (untuk barang kecil), mobil box, truk engkel, truk 6 roda, wingbox, dan truk kontainer. Pilihan kendaraan disesuaikan dengan volume dan jenis barang Anda." },
-        { q: "Apakah bisa kirim ke luar Jawa via darat?", a: "Ya, kami melayani pengiriman ke luar Jawa melalui jalur darat + feri penyeberangan. Rute seperti Surabaya–Denpasar, Surabaya–Lombok, dan Surabaya–Kalimantan sudah kami layani secara reguler." },
-        { q: "Apakah ada minimum order untuk kargo darat?", a: "Tidak ada minimum order. Untuk barang kecil dalam kota, kami bisa menggunakan pickup. Untuk barang besar, kami sediakan truk sesuai kapasitas yang dibutuhkan." },
-        { q: "Bagaimana keamanan barang selama pengiriman?", a: "Barang akan diikat dan diamankan sesuai standar. Untuk barang bernilai tinggi atau rapuh, kami sarankan menggunakan layanan packaging tambahan dan asuransi pengiriman opsional." },
-        { q: "Apakah bisa request pengiriman hari yang sama?", a: "Ya, untuk rute dalam kota Surabaya dan sekitarnya, kami bisa melayani pengiriman same-day. Untuk rute antar kota di Jawa, bisa keesokan harinya tergantung waktu pemesanan." },
-      ]}
+      faq={faqData}
     />
   </Layout>
   <WhatsAppButton />
