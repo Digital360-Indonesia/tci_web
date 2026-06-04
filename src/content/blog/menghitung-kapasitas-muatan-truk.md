@@ -2,7 +2,7 @@
 id: 2976
 title: "Bagaimana Cara Menghitung Kapasitas Muatan Truk yang Tepat?"
 slug: "menghitung-kapasitas-muatan-truk"
-date: "2025-03-10T02:37:37"
+date: "2026-03-10T02:37:37"
 modified: "2025-03-19T02:40:32"
 category: "tips-trik"
 author: "syanampro"

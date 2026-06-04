@@ -2,10 +2,10 @@
 id: 3049
 title: "Perbedaan Kargo Udara, Laut, dan Darat: Mana yang Paling Cocok untuk Bisnis Anda?"
 slug: "perbedaan-kargo-udara-laut-dan-darat-mana-yang-paling-cocok-untuk-bisnis-anda"
-date: "2025-07-28T10:15:28"
+date: "2026-05-28T10:15:28"
 modified: "2025-07-28T10:27:57"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Dalam dunia logistik modern, pemilihan moda pengiriman menjadi faktor penting yang memengaruhi efisiensi biaya, waktu, dan kepuasan pelanggan. Moda kargo udara, laut, dan darat memiliki karakteristik,"
 metaDescription: "Ingin kirim kargo aman dan cepat? Simak bagaimana Terminal Cargo Indonesia menjamin keamanan dan kecepatan pengiriman kargo Anda dengan layanan profesional dan terpercaya."
 featuredImage: "/images/uploads/2025/07/tci01.png"

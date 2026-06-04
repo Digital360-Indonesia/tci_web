@@ -2,7 +2,7 @@
 id: 2962
 title: "Tips Memilih Jasa Pengiriman Trucking yang Aman dan Terpercaya"
 slug: "memilih-jasa-pengiriman-trucking"
-date: "2025-02-05T03:38:09"
+date: "2026-02-05T03:38:09"
 modified: "2025-02-19T03:40:48"
 category: "edukasi"
 author: "syanampro"

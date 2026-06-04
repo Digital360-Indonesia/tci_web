@@ -2,7 +2,7 @@
 id: 2994
 title: "Shipped Artinya dalam Pengiriman: Apakah Barang Sudah Dikirim?"
 slug: "shipped-artinya-dalam-pengiriman"
-date: "2025-04-25T02:28:31"
+date: "2026-04-25T02:28:31"
 modified: "2025-04-25T02:28:31"
 category: "edukasi"
 author: "syanampro"

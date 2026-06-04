@@ -2,7 +2,7 @@
 id: 2984
 title: "Tips Mengamankan Barang Saat Pengiriman Menggunakan Truk"
 slug: "tips-mengamankan-barang-saat-pengiriman-menggunakan-truk"
-date: "2025-03-17T02:44:40"
+date: "2026-03-17T02:44:40"
 modified: "2025-03-19T02:47:49"
 category: "tips-trik"
 author: "syanampro"

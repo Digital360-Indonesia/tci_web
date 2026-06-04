@@ -2,7 +2,7 @@
 id: 2990
 title: "Transit Artinya Apa? Ini Makna &#038; Proses Pengiriman Barang"
 slug: "transit-artinya"
-date: "2025-04-25T02:14:17"
+date: "2026-04-25T02:14:17"
 modified: "2025-04-25T02:15:33"
 category: "edukasi"
 author: "syanampro"

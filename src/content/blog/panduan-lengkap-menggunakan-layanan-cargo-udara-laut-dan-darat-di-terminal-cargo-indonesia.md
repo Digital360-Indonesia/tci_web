@@ -2,10 +2,10 @@
 id: 3008
 title: "Panduan Lengkap Menggunakan Layanan Cargo Udara, Laut, dan Darat di Terminal Cargo Indonesia"
 slug: "panduan-lengkap-menggunakan-layanan-cargo-udara-laut-dan-darat-di-terminal-cargo-indonesia"
-date: "2025-06-17T05:14:45"
+date: "2026-05-10T05:14:45"
 modified: "2025-06-16T06:39:58"
 category: "tips-trik"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Dalam era perdagangan modern dan kebutuhan distribusi barang antar wilayah di Indonesia, jasa ekspedisi yang profesional menjadi kunci kelancaran bisnis maupun pengiriman pribadi. Terminal Cargo Indon"
 metaDescription: "Cari solusi pengiriman kargo yang aman dan efisien? Simak panduan lengkap layanan cargo udara, laut, dan darat dari Terminal Cargo Indonesia. Door-to-door, harga kompetitif!"
 featuredImage: "/images/uploads/2025/06/Template-Cover-Artikel-Uno-Jersey.png"

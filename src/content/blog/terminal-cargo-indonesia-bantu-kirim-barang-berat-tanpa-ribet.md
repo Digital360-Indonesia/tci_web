@@ -2,10 +2,10 @@
 id: 3026
 title: "Bagaimana Terminal Cargo Indonesia Membantu Konsumen Kirim Barang Berat Tanpa Ribet"
 slug: "terminal-cargo-indonesia-bantu-kirim-barang-berat-tanpa-ribet"
-date: "2025-06-19T08:53:17"
+date: "2026-05-16T08:53:17"
 modified: "2025-06-16T08:53:47"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Mengirim barang berat sering kali menjadi tantangan besar bagi konsumen, baik individu, UMKM, maupun perusahaan. Barang berat seperti mesin, alat industri, material konstruksi, atau kendaraan memerluk"
 metaDescription: "Terminal Cargo Indonesia memberikan solusi mudah untuk kirim barang berat. Layanan door-to-door, armada lengkap, dan harga kompetitif. Simak penjelasan lengkapnya di sini!"
 featuredImage: "/images/uploads/2025/06/56-1.png"

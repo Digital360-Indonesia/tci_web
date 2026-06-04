@@ -2,10 +2,10 @@
 id: 3001
 title: "Mengoptimalkan Pengiriman Kargo ke Seluruh Indonesia: Keunggulan Layanan Door-to-Door dari Terminal Cargo Indonesia"
 slug: "mengoptimalkan-pengiriman-kargo-ke-seluruh-indonesia-keunggulan-layanan-door-to-door-dari-terminal-cargo-indonesia"
-date: "2025-06-16T05:13:37"
+date: "2026-05-07T05:13:37"
 modified: "2025-06-16T05:13:37"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Kebutuhan logistik di Indonesia terus meningkat seiring perkembangan usaha kecil, menengah, hingga skala besar. Baik untuk pengiriman produk industri, barang konsumsi, maupun kebutuhan pribadi, layana"
 metaDescription: "Terminal Cargo Indonesia memberikan layanan kargo door-to-door, port-to-port, dan port-to-door dengan transportasi darat, laut, dan udara dari Surabaya ke seluruh Indonesia. Simak keunggulan, proses, dan tips memilih layanan ekspedisi terbaik di sini."
 featuredImage: "/images/uploads/2025/06/12222.jpg"

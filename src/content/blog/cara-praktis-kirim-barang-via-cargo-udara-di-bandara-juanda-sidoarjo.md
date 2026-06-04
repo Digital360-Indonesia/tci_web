@@ -2,7 +2,7 @@
 id: 2957
 title: "Cara Praktis Kirim Barang via Cargo Udara di Bandara Juanda, Sidoarjo"
 slug: "cara-praktis-kirim-barang-via-cargo-udara-di-bandara-juanda-sidoarjo"
-date: "2025-01-17T08:30:15"
+date: "2026-01-17T08:30:15"
 modified: "2025-01-18T08:30:56"
 category: "edukasi"
 author: "syanampro"

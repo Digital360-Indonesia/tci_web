@@ -2,7 +2,7 @@
 id: 2997
 title: "Packing List Adalah: Fungsi, Contoh, dan Format Terbaru"
 slug: "packing-list-adalah-fungsi-contoh-format"
-date: "2025-04-25T02:34:25"
+date: "2026-04-25T02:34:25"
 modified: "2025-04-25T02:34:25"
 category: "edukasi"
 author: "syanampro"

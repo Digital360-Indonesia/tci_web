@@ -2,7 +2,7 @@
 id: 2980
 title: "Jenis-Jenis Truk untuk Pengiriman Barang: Mana yang Paling Cocok untuk Kebutuhan Anda?"
 slug: "jenis-truk-pengiriman-barang"
-date: "2025-03-13T02:40:51"
+date: "2026-03-13T02:40:51"
 modified: "2025-03-19T02:44:22"
 category: "edukasi"
 author: "syanampro"

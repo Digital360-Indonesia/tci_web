@@ -2,10 +2,10 @@
 id: 3028
 title: "Bagaimana Terminal Cargo Indonesia Menjamin Keamanan dan Kecepatan Pengiriman Kargo Anda"
 slug: "jaminan-keamanan-kecepatan-pengiriman-terminal-cargo-indonesia"
-date: "2025-06-21T08:13:56"
+date: "2026-05-22T08:13:56"
 modified: "2025-06-16T08:56:25"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Pengiriman barang dalam skala kecil maupun besar tentu membutuhkan jaminan keamanan dan ketepatan waktu agar bisnis maupun kebutuhan pribadi berjalan lancar. Tidak sedikit pelanggan yang khawatir bara"
 metaDescription: "Ingin kirim kargo aman dan cepat? Simak bagaimana Terminal Cargo Indonesia menjamin keamanan dan kecepatan pengiriman kargo Anda dengan layanan profesional dan terpercaya."
 featuredImage: "/images/uploads/2025/06/34-1.png"

@@ -2,10 +2,10 @@
 id: 3069
 title: "Panduan Lengkap Kirim Barang Antarpulau: Proses, Dokumen, dan Tips Aman"
 slug: "panduan-kirim-barang-antarpulau"
-date: "2025-07-21T01:46:00"
+date: "2026-05-25T01:46:00"
 modified: "2025-07-29T01:55:07"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Mengirim barang ke luar pulau bukan sekadar soal mengemas dan mengirim. Prosesnya mencakup banyak tahapan mulai dari perencanaan, pengurusan dokumen, pemilihan jalur pengiriman yang tepat, hingga jami"
 metaDescription: "Pelajari proses kirim barang antarpulau lengkap dengan dokumen penting dan tips aman bersama Terminal Cargo Indonesia."
 featuredImage: "/images/uploads/2025/07/tci03.png"

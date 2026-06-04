@@ -2,7 +2,7 @@
 id: 2967
 title: "Berapa Tarif Jasa Pengiriman Trucking? Ini Faktor yang Menentukannya"
 slug: "tarif-jasa-pengiriman-trucking"
-date: "2025-02-12T03:41:07"
+date: "2026-02-12T03:41:07"
 modified: "2025-02-19T03:44:24"
 category: "edukasi"
 author: "syanampro"

@@ -2,7 +2,7 @@
 id: 2971
 title: "Keunggulan Pengiriman Barang dengan Truk Dibandingkan Moda Transportasi Lain"
 slug: "keunggulan-pengiriman-barang-dengan-truk"
-date: "2025-02-17T03:44:37"
+date: "2026-02-17T03:44:37"
 modified: "2025-02-19T03:47:21"
 category: "edukasi"
 author: "syanampro"

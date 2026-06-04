@@ -2,10 +2,10 @@
 id: 3027
 title: "5 Alasan Konsumen Setia Memilih Layanan Door-to-Door Terminal Cargo Indonesia"
 slug: "5-alasan-konsumen-setia-memilih-layanan-door-to-door-terminal-cargo-indonesia"
-date: "2025-06-20T07:58:53"
+date: "2026-05-19T07:58:53"
 modified: "2025-06-16T08:54:42"
 category: "promosi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Dalam dunia logistik modern, layanan door-to-door menjadi pilihan utama bagi konsumen yang menginginkan proses pengiriman praktis tanpa repot. Terminal Cargo Indonesia hadir menawarkan layanan door-to"
 metaDescription: "Cari jasa cargo door-to-door terpercaya? Simak 5 alasan mengapa konsumen setia memilih layanan Terminal Cargo Indonesia untuk pengiriman internasional cepat dan aman."
 featuredImage: "/images/uploads/2025/06/45-1.png"

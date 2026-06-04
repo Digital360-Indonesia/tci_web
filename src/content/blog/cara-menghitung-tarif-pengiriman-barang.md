@@ -2,10 +2,10 @@
 id: 3064
 title: "Cara Menghitung Tarif Pengiriman Barang: Panduan Lengkap untuk Pemula"
 slug: "cara-menghitung-tarif-pengiriman-barang"
-date: "2025-07-29T01:41:02"
+date: "2026-05-30T01:41:02"
 modified: "2025-07-29T01:42:16"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Menentukan tarif pengiriman barang bukan sekadar melihat jarak atau jenis kendaraan yang digunakan. Dalam industri logistik, perhitungan tarif dipengaruhi oleh berbagai faktor teknis yang saling berka"
 metaDescription: "Ingin kirim kargo aman dan cepat? Simak bagaimana Terminal Cargo Indonesia menjamin keamanan dan kecepatan pengiriman kargo Anda dengan layanan profesional dan terpercaya.Pelajari cara menghitung tarif pengiriman barang berdasarkan jenis kargo, berat, volume, dan jarak. Panduan ini cocok untuk pemula."
 featuredImage: "/images/uploads/2025/07/tci02.png"

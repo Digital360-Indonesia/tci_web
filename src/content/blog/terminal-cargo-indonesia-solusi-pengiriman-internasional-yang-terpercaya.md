@@ -2,10 +2,10 @@
 id: 3005
 title: "Terminal Cargo Indonesia: Solusi Pengiriman Internasional yang Terpercaya"
 slug: "terminal-cargo-indonesia-solusi-pengiriman-internasional-yang-terpercaya"
-date: "2025-06-18T05:10:37"
+date: "2026-05-13T05:10:37"
 modified: "2025-06-16T06:39:00"
 category: "edukasi"
-author: "Lukman"
+author: "syanampro"
 excerpt: "Dalam era globalisasi seperti saat ini, kebutuhan akan jasa pengiriman barang lintas negara semakin meningkat. Baik perusahaan besar, UKM, maupun individu membutuhkan layanan kargo internasional yang "
 metaDescription: "Dalam era globalisasi seperti saat ini, kebutuhan akan jasa pengiriman barang lintas negara semakin meningkat. Baik perusahaan besar, UKM, maupun individu membu"
 featuredImage: "/images/uploads/2025/06/23.png"
