@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://terminalcargoindonesia.com/sitemap-index.xml

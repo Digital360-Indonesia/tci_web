@@ -13,6 +13,7 @@ interface Props {
 const { title = SITE.name, description = SITE.description, ogImage = '/images/tci_layanan_cargo_udara.png', canonicalUrl, jsonLd } = Astro.props;
 const fullTitle = title === SITE.name ? title : `${title} | TCI`;
 const currentUrl = canonicalUrl || Astro.url.href;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : SITE.url + ogImage;
 
 // Default Organization schema (always present)
 const orgSchema = {
@@ -83,9 +84,15 @@ if (jsonLd) {
   <link rel="canonical" href={currentUrl} />
   <link rel="icon" type="image/png" href="/images/brand/tci-favicon.png" />
   <meta name="theme-color" content="#021B43" />
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <!-- Google Fonts: Inter -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={absoluteOgImage} />
   <meta property="og:url" content={currentUrl} />
   <meta property="og:site_name" content={SITE.name} />
   <meta property="og:type" content="website" />
@@ -93,7 +100,7 @@ if (jsonLd) {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={absoluteOgImage} />
   <meta name="robots" content="index, follow" />
   <!-- JSON-LD Structured Data -->
   {allSchemas.map((schema) => (

@@ -16,6 +16,7 @@ const otherLinks = [
   { label: 'Kargo Laut', href: '/service/kargo-laut/' },
   { label: 'Kargo Darat', href: '/service/kargo-darat/' },
   { label: 'Tentang Kami', href: '/tentang/' },
+  { label: 'Company Profile', href: '/compro/' },
   { label: 'Berita & Artikel', href: '/berita/' },
 ];
 ---
@@ -216,5 +217,11 @@ const otherLinks = [
     75% { transform: translate(70vw, -25px) rotate(2deg); }
     90% { opacity: 0.3; }
     100% { transform: translate(100vw, 10px) rotate(-4deg); opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-plane-1, .footer-plane-2, .footer-plane-3 {
+      animation: none !important;
+    }
   }
 </style>
