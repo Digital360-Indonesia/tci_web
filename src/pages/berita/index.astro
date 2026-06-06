@@ -345,3 +345,50 @@ const postsData = sortedPosts.map((p) => ({
   // Initial render with skeleton, then reveal
   setTimeout(() => { renderPage(true); }, 400);
 </script>
+
+<!-- Re-init on ClientRouter navigation -->
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const allItems = document.querySelectorAll('.article-item');
+    const skelCards = document.querySelectorAll('.skel-card');
+    if (allItems.length === 0) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('category') || '';
+    const page = parseInt(params.get('page') || '1', 10);
+    const perPage = 9;
+
+    const items = Array.from(allItems);
+    const filtered = cat ? items.filter((item) => (item as HTMLElement).dataset.category === cat) : items;
+    const start = (page - 1) * perPage;
+    const pageItems = new Set(filtered.slice(start, start + perPage));
+
+    // Show skeleton first
+    skelCards.forEach((s, i) => {
+      (s as HTMLElement).style.display = i < Math.min(perPage, filtered.length) ? '' : 'none';
+    });
+    items.forEach((item) => { (item as HTMLElement).style.display = 'none'; });
+
+    // Reveal after short delay
+    setTimeout(() => {
+      skelCards.forEach((s) => { (s as HTMLElement).style.display = 'none'; });
+      items.forEach((item) => {
+        const el = item as HTMLElement;
+        const matchCat = !cat || el.dataset.category === cat;
+        el.style.display = (matchCat && pageItems.has(el)) ? '' : 'none';
+      });
+
+      // Set active pill
+      document.querySelectorAll('.category-pill').forEach((p) => {
+        const pCat = (p as HTMLElement).dataset.category || '';
+        if (pCat === cat) {
+          p.classList.add('bg-accent', 'text-white', 'border-accent');
+          p.classList.remove('text-gray-600', 'border-gray-200');
+        } else {
+          p.classList.remove('bg-accent', 'text-white', 'border-accent');
+          p.classList.add('text-gray-600', 'border-gray-200');
+        }
+      });
+    }, 600);
+  });
+</script>
