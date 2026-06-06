@@ -8,7 +8,7 @@ export const SITE = {
   whatsappMessage: 'Halo TCI, saya ingin konsultasi tentang pengiriman barang.',
   phone: '(031) 5828 5034',
   phoneAlt: '0821 5259 5159',
-  email: 'info@terminalcargoindonesia.com',
+  email: 'cs@terminalcargoindonesia.com',
   emailAlt: 'cs@terminalcargoindonesia.com',
   address: 'Terminal Cargo T2 Bandara Juanda, Sidoarjo',
   mapsUrl: 'https://maps.app.goo.gl/h14NMQ8Dj9M4mdJF6',
