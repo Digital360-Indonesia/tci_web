@@ -5,6 +5,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://terminalcargoindonesia.com',
   output: 'static',
+  experimental: {
+    clientPrerender: true,
+  },
   integrations: [
     sitemap(),
   ],
