@@ -16,32 +16,15 @@
 }
 
 @layer components {
-  /* ── Page transition ── */
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* New page fades + slides up */
-  ::view-transition-new(root) {
-    animation: fadeSlideIn 0.3s ease-out both;
-  }
-
-  /* Old page fades out */
-  ::view-transition-old(root) {
-    animation: fadeSlideIn 0.2s ease-in both reverse;
-  }
-
-  /* Disable transition for dark → dark backgrounds (no flash) */
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    mix-blend-mode: normal;
+  /* ── Page transition: Page Curtain (navy sweep) ── */
+  #page-curtain {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #021B43;
+    transform: translateY(100%);
+    pointer-events: none;
+    will-change: transform;
   }
 
   /* Skeleton shimmer */

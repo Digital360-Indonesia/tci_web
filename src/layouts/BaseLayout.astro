@@ -114,6 +114,68 @@ if (jsonLd) {
 <body class="bg-white text-gray-800 font-sans antialiased">
   <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7J6H8GZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Page Curtain (navy sweep) -->
+  <div id="page-curtain" transition:persist></div>
   <slot />
 </body>
 </html>
+
+<script>
+  declare const window: Window & { __curtainInit?: boolean };
+  if (!window.__curtainInit) {
+    window.__curtainInit = true;
+
+    const curtain = document.getElementById('page-curtain');
+    if (!curtain) throw new Error('page-curtain not found');
+
+    const EASE = [0.76, 0, 0.24, 1] as [number, number, number, number];
+    const DURATION_LEAVE = 520;   // sweep up covering screen
+    const DURATION_ENTER = 700;   // sweep up revealing new page
+    const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ── Leave: curtain sweeps from bottom up to cover screen ──
+    document.addEventListener('astro:before-preparation', () => {
+      if (prefersReducedMotion()) return;
+
+      const anim = curtain.animate([
+        { transform: 'translateY(100%)' },
+        { transform: 'translateY(0)' }
+      ], {
+        duration: DURATION_LEAVE,
+        easing: `cubic-bezier(${EASE.join(',')})`,
+        fill: 'forwards'
+      });
+
+      return anim.finished;
+    });
+
+    // ── Enter: curtain sweeps up revealing new page ──
+    document.addEventListener('astro:after-swap', () => {
+      if (prefersReducedMotion()) {
+        curtain.style.transform = 'translateY(100%)';
+        return;
+      }
+
+      const anim = curtain.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-100%)' }
+      ], {
+        duration: DURATION_ENTER,
+        easing: `cubic-bezier(${EASE.join(',')})`,
+        fill: 'forwards'
+      });
+
+      anim.addEventListener('finish', () => {
+        curtain.style.transform = 'translateY(100%)';
+      }, { once: true });
+    });
+
+    // ── bfcache fix: cancel stale curtain on back/forward ──
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) {
+        curtain.getAnimations().forEach((a) => a.cancel());
+        curtain.style.transform = 'translateY(100%)';
+      }
+    });
+  }
+</script>
