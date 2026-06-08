@@ -47,9 +47,18 @@ const stats = [
 </section>
 
 <script>
-  const section = document.getElementById('stats-section');
-  if (section) {
+  function initStats() {
+    const section = document.getElementById('stats-section');
+    if (!section) return;
+
     const counters = section.querySelectorAll<HTMLSpanElement>('.counter');
+    if (!counters.length) return;
+
+    // Reset semua counter ke 0
+    counters.forEach((counter) => {
+      counter.textContent = '0';
+    });
+
     let animated = false;
 
     const observer = new IntersectionObserver(
@@ -57,6 +66,7 @@ const stats = [
         entries.forEach((entry) => {
           if (entry.isIntersecting && !animated) {
             animated = true;
+            observer.disconnect();
             counters.forEach((counter) => {
               const target = parseInt(counter.dataset.target || '0', 10);
               const duration = 2000;
@@ -83,4 +93,13 @@ const stats = [
 
     observer.observe(section);
   }
+
+  // Init on first load
+  initStats();
+
+  // Re-init after SPA navigation (Astro ClientRouter)
+  document.addEventListener('astro:after-swap', () => {
+    // Tunggu curtain mulai terbuka baru mulai counter
+    setTimeout(initStats, 300);
+  });
 </script>

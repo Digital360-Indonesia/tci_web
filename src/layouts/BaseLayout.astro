@@ -128,9 +128,9 @@ if (jsonLd) {
     const curtain = document.getElementById('page-curtain');
     if (!curtain) throw new Error('page-curtain not found');
 
-    const EASE = [0.76, 0, 0.24, 1] as [number, number, number, number];
-    const DURATION_LEAVE = 520;   // sweep up covering screen
-    const DURATION_ENTER = 700;   // sweep up revealing new page
+    const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
+    const DURATION_LEAVE = 680;   // sweep up covering screen
+    const DURATION_ENTER = 920;   // sweep up revealing new page
     const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // ── Leave: curtain sweeps from bottom up to cover screen ──

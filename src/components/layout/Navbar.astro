@@ -24,9 +24,9 @@ function isActive(href: string): boolean {
 }
 ---
 
-<div class="relative z-50">
-  <!-- Topbar -->
-  <div class="hidden lg:block bg-primary text-white text-sm">
+<div class="relative" id="navbar-wrapper">
+  <!-- Topbar (desktop only) -->
+  <div id="topbar" class="hidden lg:block bg-primary text-white text-sm">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-10">
       <div class="flex items-center gap-6">
         <span class="flex items-center gap-1.5">
@@ -53,7 +53,7 @@ function isActive(href: string): boolean {
   </div>
 
   <!-- Main Navbar -->
-  <nav id="main-nav" class="bg-white transition-shadow duration-300 sticky top-0">
+  <nav id="main-nav" class="bg-white/95 backdrop-blur-md transition-shadow duration-300 z-50 border-b border-transparent">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
       <a href="/" class="flex-shrink-0">
@@ -128,8 +128,8 @@ function isActive(href: string): boolean {
   </nav>
 
   <!-- Mobile Drawer -->
-  <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 opacity-0 invisible transition-all duration-300 lg:hidden"></div>
-  <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl">
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 invisible transition-all duration-300 lg:hidden"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-[70] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl">
     <div class="flex flex-col h-full">
       <!-- Drawer Header -->
       <div class="flex items-center justify-between px-4 h-16 border-b border-gray-100">
@@ -204,82 +204,159 @@ function isActive(href: string): boolean {
 </div>
 
 <script>
-  const mainNav = document.getElementById('main-nav');
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileCloseBtn = document.getElementById('mobile-close-btn');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-  const mobileOverlay = document.getElementById('mobile-overlay');
-  const bar1 = document.getElementById('bar1');
-  const bar2 = document.getElementById('bar2');
-  const bar3 = document.getElementById('bar3');
-  const hargaBtn = document.getElementById('harga-dropdown-btn');
+  declare const window: Window & { __navInit?: boolean };
 
-  let drawerOpen = false;
+  const NAV_STICKY_BREAKPOINT = 1024;
+  let spacer: HTMLDivElement | null = null;
 
-  function toggleDrawer(open: boolean) {
-    drawerOpen = open;
-    mobileDrawer?.classList.toggle('translate-x-full', !open);
-    mobileDrawer?.classList.toggle('translate-x-0', open);
-    mobileOverlay?.classList.toggle('opacity-0', !open);
-    mobileOverlay?.classList.toggle('invisible', !open);
-    mobileOverlay?.classList.toggle('opacity-100', open);
-    mobileOverlay?.classList.toggle('visible', open);
-    mobileBtn?.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
+  function getNav() {
+    return {
+      mainNav: document.getElementById('main-nav'),
+      wrapper: document.getElementById('navbar-wrapper'),
+      topbar: document.getElementById('topbar'),
+    };
+  }
 
-    if (bar1 && bar2 && bar3) {
-      if (open) {
-        bar1.classList.add('rotate-45', 'translate-y-[9px]');
-        bar2.classList.add('opacity-0');
-        bar3.classList.add('-rotate-45', '-translate-y-[9px]');
+  // ── Desktop Sticky Nav ──
+  function updateStickyNav() {
+    const { mainNav, wrapper } = getNav();
+    if (!mainNav || !wrapper) return;
+    const isDesktop = window.innerWidth >= NAV_STICKY_BREAKPOINT;
+
+    if (isDesktop) {
+      const topbar = document.getElementById('topbar');
+      const topbarH = topbar ? topbar.offsetHeight : 0;
+      const navH = mainNav.offsetHeight;
+      const scrollY = window.scrollY;
+
+      if (scrollY > topbarH) {
+        mainNav.style.position = 'fixed';
+        mainNav.style.top = '0';
+        mainNav.style.left = '0';
+        mainNav.style.right = '0';
+        mainNav.classList.add('shadow-lg', 'border-gray-100');
+
+        if (!spacer) {
+          spacer = document.createElement('div');
+          spacer.style.height = navH + 'px';
+          wrapper.insertBefore(spacer, mainNav);
+        }
       } else {
-        bar1.classList.remove('rotate-45', 'translate-y-[9px]');
-        bar2.classList.remove('opacity-0');
-        bar3.classList.remove('-rotate-45', '-translate-y-[9px]');
+        mainNav.style.position = '';
+        mainNav.style.top = '';
+        mainNav.style.left = '';
+        mainNav.style.right = '';
+        mainNav.classList.remove('shadow-lg', 'border-gray-100');
+
+        if (spacer) {
+          spacer.remove();
+          spacer = null;
+        }
+      }
+    } else {
+      // Mobile: reset
+      mainNav.style.position = '';
+      mainNav.style.top = '';
+      mainNav.style.left = '';
+      mainNav.style.right = '';
+      mainNav.classList.remove('shadow-lg', 'border-gray-100');
+      if (spacer) {
+        spacer.remove();
+        spacer = null;
       }
     }
   }
 
-  mobileBtn?.addEventListener('click', () => toggleDrawer(!drawerOpen));
-  mobileCloseBtn?.addEventListener('click', () => toggleDrawer(false));
-  mobileOverlay?.addEventListener('click', () => toggleDrawer(false));
+  // ── Mobile Drawer ──
+  let drawerOpen = false;
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') toggleDrawer(false);
-  });
+  function toggleDrawer(open: boolean) {
+    drawerOpen = open;
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('mobile-overlay');
+    const btn = document.getElementById('mobile-menu-btn');
+    const b1 = document.getElementById('bar1');
+    const b2 = document.getElementById('bar2');
+    const b3 = document.getElementById('bar3');
 
-  window.addEventListener('scroll', () => {
-    if (mainNav) {
-      if (window.scrollY > 10) {
-        mainNav.classList.add('shadow-lg');
-      } else {
-        mainNav.classList.remove('shadow-lg');
-      }
+    drawer?.classList.toggle('translate-x-full', !open);
+    drawer?.classList.toggle('translate-x-0', open);
+    overlay?.classList.toggle('opacity-0', !open);
+    overlay?.classList.toggle('invisible', !open);
+    overlay?.classList.toggle('opacity-100', open);
+    overlay?.classList.toggle('visible', open);
+    btn?.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+
+    if (b1 && b2 && b3) {
+      b1.classList.toggle('rotate-45', open);
+      b1.classList.toggle('translate-y-[9px]', open);
+      b2.classList.toggle('opacity-0', open);
+      b3.classList.toggle('-rotate-45', open);
+      b3.classList.toggle('-translate-y-[9px]', open);
     }
-  });
+  }
 
-  hargaBtn?.addEventListener('click', () => {
-    const menu = document.getElementById('harga-dropdown-menu');
-    const wrapper = document.getElementById('harga-dropdown-wrapper');
-    if (menu && wrapper) {
-      const isVisible = menu.classList.contains('visible');
-      menu.classList.toggle('opacity-0', isVisible);
-      menu.classList.toggle('invisible', isVisible);
-      menu.classList.toggle('opacity-100', !isVisible);
-      menu.classList.toggle('visible', !isVisible);
-      hargaBtn.setAttribute('aria-expanded', String(!isVisible));
-    }
-  });
+  // ── Init all listeners (runs on every page load + SPA swap) ──
+  function initNavbar() {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const hargaBtn = document.getElementById('harga-dropdown-btn');
 
-  document.querySelectorAll('[data-toggle="mobile-harga"]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-toggle');
-      const target = document.getElementById(targetId!);
-      const svg = btn.querySelector('svg');
-      if (target) {
-        target.classList.toggle('hidden');
-        svg?.classList.toggle('rotate-180');
+    // Reset sticky state on new page
+    spacer = null;
+
+    // Mobile drawer
+    mobileBtn?.addEventListener('click', () => toggleDrawer(!drawerOpen));
+    mobileCloseBtn?.addEventListener('click', () => toggleDrawer(false));
+    mobileOverlay?.addEventListener('click', () => toggleDrawer(false));
+
+    // Desktop harga dropdown
+    hargaBtn?.addEventListener('click', () => {
+      const menu = document.getElementById('harga-dropdown-menu');
+      if (menu) {
+        const isVisible = menu.classList.contains('visible');
+        menu.classList.toggle('opacity-0', isVisible);
+        menu.classList.toggle('invisible', isVisible);
+        menu.classList.toggle('opacity-100', !isVisible);
+        menu.classList.toggle('visible', !isVisible);
+        hargaBtn.setAttribute('aria-expanded', String(!isVisible));
       }
     });
+
+    // Mobile harga dropdown
+    document.querySelectorAll('[data-toggle="mobile-harga"]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-toggle');
+        const target = document.getElementById(targetId!);
+        const svg = btn.querySelector('svg');
+        target?.classList.toggle('hidden');
+        svg?.classList.toggle('rotate-180');
+      });
+    });
+
+    // Check sticky state immediately for current scroll position
+    updateStickyNav();
+  }
+
+  // ── Global listeners (only once) ──
+  if (!window.__navInit) {
+    window.__navInit = true;
+
+    window.addEventListener('scroll', updateStickyNav, { passive: true });
+    window.addEventListener('resize', updateStickyNav, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleDrawer(false);
+    });
+  }
+
+  // ── First load ──
+  initNavbar();
+
+  // ── Re-init after SPA navigation ──
+  document.addEventListener('astro:after-swap', () => {
+    initNavbar();
   });
 </script>
