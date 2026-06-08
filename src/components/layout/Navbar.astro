@@ -24,7 +24,7 @@ function isActive(href: string): boolean {
 }
 ---
 
-<div class="relative" id="navbar-wrapper">
+<div class="relative z-50" id="navbar-wrapper">
   <!-- Topbar (desktop only) -->
   <div id="topbar" class="hidden lg:block bg-primary text-white text-sm">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-10">
@@ -74,7 +74,7 @@ function isActive(href: string): boolean {
                 {item.label}
                 <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
-              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200" id="harga-dropdown-menu">
+              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50" id="harga-dropdown-menu">
                 <div class="bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[260px]">
                   {item.items?.map((sub) => (
                     <a
