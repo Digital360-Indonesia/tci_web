@@ -129,15 +129,32 @@ if (jsonLd) {
     if (!curtain) throw new Error('page-curtain not found');
 
     const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
-    const DURATION_LEAVE = 680;   // sweep up covering screen
-    const DURATION_ENTER = 920;   // sweep up revealing new page
+    const DURATION_LEAVE = 680;
+    const DURATION_ENTER = 920;
     const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    let leaveAnim: Animation | null = null;
+    let enterAnim: Animation | null = null;
+
+    function cancelAllCurtainAnimations(): void {
+      if (leaveAnim) { try { leaveAnim.cancel(); } catch {} leaveAnim = null; }
+      if (enterAnim) { try { enterAnim.cancel(); } catch {} enterAnim = null; }
+      // Also cancel any leftover Web Animations API animations on the curtain
+      curtain.getAnimations().forEach((a) => { try { a.cancel(); } catch {} });
+    }
+
     // ── Leave: curtain sweeps from bottom up to cover screen ──
+    // We play the leave animation immediately on before-preparation.
+    // Astro 6 does NOT wait for this promise (return value ignored),
+    // but that's fine — the animation runs concurrently with page fetch.
     document.addEventListener('astro:before-preparation', () => {
       if (prefersReducedMotion()) return;
 
-      const anim = curtain.animate([
+      // Cancel any previous animations first (rapid navigation protection)
+      cancelAllCurtainAnimations();
+      curtain.style.transform = 'translateY(100%)';
+
+      leaveAnim = curtain.animate([
         { transform: 'translateY(100%)' },
         { transform: 'translateY(0)' }
       ], {
@@ -146,17 +163,32 @@ if (jsonLd) {
         fill: 'forwards'
       });
 
-      return anim.finished;
+      leaveAnim.addEventListener('finish', () => {
+        leaveAnim = null;
+      }, { once: true });
     });
 
     // ── Enter: curtain sweeps up revealing new page ──
     document.addEventListener('astro:after-swap', () => {
+      // Always cancel stale leave animation (in case it's still running)
+      if (leaveAnim) {
+        try { leaveAnim.cancel(); } catch {}
+        leaveAnim = null;
+      }
+      if (enterAnim) {
+        try { enterAnim.cancel(); } catch {}
+        enterAnim = null;
+      }
+
       if (prefersReducedMotion()) {
         curtain.style.transform = 'translateY(100%)';
         return;
       }
 
-      const anim = curtain.animate([
+      // Ensure curtain is fully covering screen before we start the reveal
+      curtain.style.transform = 'translateY(0)';
+
+      enterAnim = curtain.animate([
         { transform: 'translateY(0)' },
         { transform: 'translateY(-100%)' }
       ], {
@@ -165,15 +197,38 @@ if (jsonLd) {
         fill: 'forwards'
       });
 
-      anim.addEventListener('finish', () => {
+      enterAnim.addEventListener('finish', () => {
         curtain.style.transform = 'translateY(100%)';
+        enterAnim = null;
       }, { once: true });
+    });
+
+    // ── Safety net: if curtain is stuck after 3s, force reset ──
+    document.addEventListener('astro:after-swap', () => {
+      setTimeout(() => {
+        const currentAnims = curtain.getAnimations();
+        const hasActiveAnim = currentAnims.some(a => a.playState === 'running');
+        if (!hasActiveAnim) {
+          // No active animation — make sure curtain is hidden
+          const style = getComputedStyle(curtain);
+          const ty = style.transform;
+          // If curtain is not at translateY(100%) or translateY(-100%), force reset
+          if (ty !== 'matrix(1, 0, 0, 1, 0, 0)' && !ty.includes('100%')) {
+            // If it's visually blocking, just check if it covers viewport
+            const rect = curtain.getBoundingClientRect();
+            if (rect.top === 0 && rect.left === 0 && rect.width > 0 && rect.height > 0) {
+              // Curtain is covering the viewport — force reset
+              curtain.style.transform = 'translateY(100%)';
+            }
+          }
+        }
+      }, 3000);
     });
 
     // ── bfcache fix: cancel stale curtain on back/forward ──
     window.addEventListener('pageshow', (e) => {
       if (e.persisted) {
-        curtain.getAnimations().forEach((a) => a.cancel());
+        cancelAllCurtainAnimations();
         curtain.style.transform = 'translateY(100%)';
       }
     });

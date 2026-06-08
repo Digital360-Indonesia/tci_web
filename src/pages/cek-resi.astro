@@ -101,10 +101,6 @@ const breadcrumbSchema = {
 
   const POD_BASE_URL = 'https://app.terminalcargoindonesia.com/file/pod/';
 
-  const form = document.getElementById('tracking-form') as HTMLFormElement;
-  const input = document.getElementById('awb-input') as HTMLInputElement;
-  const results = document.getElementById('results') as HTMLDivElement;
-
   function formatDate(dateStr: string): string {
     if (!dateStr) return '-';
     const d = new Date(dateStr);
@@ -119,6 +115,8 @@ const breadcrumbSchema = {
   }
 
   function showLoading(): void {
+    const results = document.getElementById('results');
+    if (!results) return;
     results.innerHTML = `
       <div class="flex justify-center items-center py-12">
         <svg class="animate-spin h-10 w-10 text-[#FF5001]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -130,6 +128,8 @@ const breadcrumbSchema = {
   }
 
   function showError(title: string, message: string): void {
+    const results = document.getElementById('results');
+    if (!results) return;
     results.innerHTML = `
       <div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center my-10">
         <svg class="w-12 h-12 text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,6 +142,8 @@ const breadcrumbSchema = {
   }
 
   function renderOrders(orders: any[]): void {
+    const results = document.getElementById('results');
+    if (!results) return;
     let html = '';
 
     for (const order of orders) {
@@ -202,32 +204,46 @@ const breadcrumbSchema = {
     results.innerHTML = html;
   }
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const nomor = input.value.trim();
-    if (!nomor) {
-      input.focus();
-      return;
-    }
+  function initCekResi() {
+    const form = document.getElementById('tracking-form') as HTMLFormElement;
+    const input = document.getElementById('awb-input') as HTMLInputElement;
+    if (!form || !input) return;
 
-    showLoading();
-
-    try {
-      const res = await fetch(`${API_URL}?nomor=${encodeURIComponent(nomor)}`);
-      const data = await res.json();
-
-      if (data.error === 'Data Terhapus Sementara' || (data.orders && data.orders.length > 0 && data.orders[0].deleted_at)) {
-        showError('Data Terhapus Sementara', 'Data pengiriman ini telah dihapus sementara dari sistem.');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nomor = input.value.trim();
+      if (!nomor) {
+        input.focus();
         return;
       }
 
-      if (data.found && data.orders && data.orders.length > 0) {
-        renderOrders(data.orders);
-      } else {
-        showError('Nomor AWB Belum Dimasukkan Dalam Sistem', `Nomor AWB "${nomor}" tidak ditemukan. Pastikan nomor yang Anda masukkan sudah benar.`);
+      showLoading();
+
+      try {
+        const res = await fetch(`${API_URL}?nomor=${encodeURIComponent(nomor)}`);
+        const data = await res.json();
+
+        if (data.error === 'Data Terhapus Sementara' || (data.orders && data.orders.length > 0 && data.orders[0].deleted_at)) {
+          showError('Data Terhapus Sementara', 'Data pengiriman ini telah dihapus sementara dari sistem.');
+          return;
+        }
+
+        if (data.found && data.orders && data.orders.length > 0) {
+          renderOrders(data.orders);
+        } else {
+          showError('Nomor AWB Belum Dimasukkan Dalam Sistem', `Nomor AWB "${nomor}" tidak ditemukan. Pastikan nomor yang Anda masukkan sudah benar.`);
+        }
+      } catch (err) {
+        showError('Terjadi Kesalahan', 'Gagal menghubungi server. Silakan coba lagi nanti.');
       }
-    } catch (err) {
-      showError('Terjadi Kesalahan', 'Gagal menghubungi server. Silakan coba lagi nanti.');
-    }
+    });
+  }
+
+  // Init on first load
+  initCekResi();
+
+  // Re-init after SPA navigation
+  document.addEventListener('astro:after-swap', () => {
+    initCekResi();
   });
 </script>
